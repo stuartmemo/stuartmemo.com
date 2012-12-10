@@ -2,31 +2,250 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Miniplate</title>
+        <title>Stuart Memo</title>
+        <meta name="author" content="Stuart Memo"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="//use.typekit.net/iij2wcl.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
         <style>
             html, body {
-                background: pink;
+                background: none;
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
             }
 
-            h1 {
-                font-family: Arial, sans-serif;
+            #container {
+                margin: auto;
+                width: 99%;
             }
 
-            div.container {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .tiles {
+                position: absolute;
+            }
+
+            .tiles li {
+                float: left;
+                line-height: 0;
+                width: 200px;
+                height: 200px;
+            }
+
+            .tiles img {
+                width: 200px;
+                height: 200px;
+                visibility: hidden;
+            }
+
+            #movies img, .tiles img:hover {
+                visibility: visible;
+            }
+
+            .tiles li:hover {
+                cursor: pointer
+            }
+
+            .tiles h2, .tiles p {
+                line-height: 1.4em;
+                font-family:"nimbus-sans-1","nimbus-sans-2", sans-serif;
+                font-weight: normal;
+            }
+
+            .fg li {
+                height: 180px;
+                width: 180px;
+                float: left;
+                list-style: none;
+                padding: 10px;
+                -webkit-transition-property: background-color;
+                -webkit-transition-duration: 0.1s;
+            }
+
+            .fg li a {
+                height: 100%;
+                width: 100%;
+                display: block;
+                visibility: hidden;
+                text-decoration: none;
+            }
+
+            .fg li:hover a {
+                visibility: visible;
+            }
+
+            .bg, .fg {
+                position: absolute;
+            }
+                                
+            .bg li {
+                background: blue;
+                height: 25px;
+                width: 25px;
+                float: left;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <h1>Hi there!</h1>
-            <p class="icon">Welcome friend.</p>
+        <div id="container">
+            <ul id="movies" class="tiles">
+                <li><img src="images/wavy-jones.gif"/>
+                <li><img src="images/waveforms.png"/>
+                <li><img src="images/jsconf-eu.png"/>
+                <li><img src="images/theremin.png"/>
+                <li><img src="images/making-waves.png"/>
+                <li><img src="images/abbey-load.gif"/>
+                <li><img src="images/web-audio-intro.png"/>
+                <li><img src="images/qwerty-hancock.gif"/>
+                <li><img src="images/mrs-modular.png"/>
+                <li><img src="images/monster.png"/>
+                <li><img src="images/hn-pod.png"/>
+                <li><img src="images/gmail.png"/>
+                <li><img src="images/protothon.png"/>
+                <li><img src="images/twitter.png"/>
+                <li><img src="images/octocat.png"/>
+            </ul>
+            <ul id="background" class="bg"></ul>
+            <ul id="foreground" class="fg tiles">
+                <li>
+                    <a href="/wavy-jones/">
+                        <h2>Wavy Jones</h2>
+                        <p>An oscillioscope for your Web Audio projects.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/making-sine-square-sawtooth-and-triangle-waves/">
+                        <h2>Making waves</h2>
+                        <p>How to make some basic sounds using the Web Audio API.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/watch?v=PN8Eg1K9xjE">
+                        <h2>JSConf EU</h2>
+                        <p>&ldquo;JavaScript is the new Punk Rock&rdquo; &mdash; my talk from JSConf EU 2012.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/watch?v=PN8Eg1K9xjE">
+                        <h2>Electro-theremin</h2>
+                        <p>As heard on &ldquo;Good Vibrations&rdquo; by The Beach Boys.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/watch?v=oHBx_kMmsRE">
+                        <h2>Oscillate</h2>
+                        <p>Short video tutorial on how make a sound using the Web Audio API.</p>
+                    </a>
+                </li>
+                 <li> 
+                    <a href="/abbey-load/">
+                        <h2>Abbey Load</h2>
+                        <p>An audio asset manager for web audio projects.</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/qwerty-hancock/">
+                        <h2>Web Audio API</h2>
+                        <p>A little tutorial on how to get up and running with the Web Audio API.</p>
+                    </a>
+                </li>
+                 <li> 
+                    <a href="/qwerty-hancock/">
+                        <h2>Qwerty Hancock</h2>
+                        <p>Add a vector keyboard to your audio project.</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/mrs-modular/">
+                        <h2>Mrs. Modular</h2>
+                        <p>A synthesizer in your browser using the Web Audio API.</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="/greq/">
+                        <h2>Frequency of a Note</h2>
+                        <p>Gist to convert a note to a frequency.</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="http://www.hnpod.com/episodes/why-programmers-work-at-night-i-don-t-want-to-be-part-of-your-ecosystem-twitter-api-limits">
+                        <h2>HNpod</h2>
+                        <p>I was recently a guest on the HNpod podcast. Have a listen here.</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="#">
+                        <h2>Email me!</h2>
+                        <p>stuartmemo at gmail com (does this actually fool bots anymore?)</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="http://protothon.com">
+                        <h2>Protothon</h2>
+                        <p>Rethinking Real-time on 30/11/12 with Chrome at Campus London.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com/stuartmemo">
+                        <h2>Twitter</h2>
+                        <p>I talk a lot of rubbish on Twitter as @stuartmemo</p>
+                    </a>
+                </li>
+                <li> 
+                    <a href="http://github.com/stuartmemo">
+                        <h2>Github</h2>
+                        <p>Fork, fix, and have fun with the things I made on Github.</p>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <script src="scripts/masonry.min.js"></script>
         <script>
-            console.log('Ready for action!');
+            var getRandomInt = function (min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+
+            var randomColour = function (alpha, saturation, lightness) {
+                var hue = getRandomInt(0, 360),
+                    sat = saturation || getRandomInt(50, 100) + '%',
+                    lit = lightness || getRandomInt(10, 100) + '%',
+                    alf = alpha || Math.random() * (0.8 - 0) + 0; 
+
+                return 'hsla(' + hue + ',' + sat + ',' + lit + ',' + alf + ')';
+            };
+
+            var bg = document.getElementById('background'),
+                childNodes = document.getElementById('movies').getElementsByTagName('li'),
+                noOfChildNodes = childNodes.length;
+
+            for (var i = 0; i < 2080; i++) {
+                var elem = document.createElement('li');
+                elem.style.backgroundColor = randomColour();
+                bg.appendChild(elem);
+            }
+
+            var changeTiles = function () {
+                var tiles = document.getElementById('background').getElementsByTagName('li'),
+                    noOfTiles = tiles.length,
+                    random = getRandomInt(0, noOfTiles);
+
+                for (var i = 0; i < noOfTiles; i++) {
+                    if (i === random) {
+                        tiles[i].style.backgroundColor = randomColour();
+                    }
+                }
+
+                setTimeout(changeTiles, 100);
+            }
+
+            document.styleSheets[0].insertRule('.fg li:hover { background-color: ' + randomColour(0.95, '40%', '50%') + ';} ', 0);
+            document.styleSheets[0].insertRule('.fg li:hover a { color: ' + randomColour(1, '90%', '100%') + ';} ', 0);
+
+            changeTiles();
         </script>
     </body>
 </html>
