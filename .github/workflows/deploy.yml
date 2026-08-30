@@ -32,7 +32,7 @@ jobs:
         run: ./scripts/verify-site.sh
 
       - name: Check deployment configuration
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/master'
         env:
           DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
           DEPLOY_USER: ${{ vars.DEPLOY_USER }}
@@ -45,7 +45,7 @@ jobs:
           test -n "$DEPLOY_KNOWN_HOSTS"
 
       - name: Configure deployment SSH identity
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/master'
         env:
           DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
           DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
@@ -57,7 +57,7 @@ jobs:
           chmod 0600 "$HOME/.ssh/known_hosts"
 
       - name: Upload immutable release
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/master'
         env:
           DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
           DEPLOY_USER: ${{ vars.DEPLOY_USER }}
@@ -72,7 +72,7 @@ jobs:
           printf 'RELEASE_ID=%s\n' "$release_id" >> "$GITHUB_ENV"
 
       - name: Activate release
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/master'
         env:
           DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
           DEPLOY_USER: ${{ vars.DEPLOY_USER }}
@@ -85,7 +85,7 @@ jobs:
             "$DEPLOY_USER@$DEPLOY_HOST" "activate $RELEASE_ID"
 
       - name: Verify production release
-        if: github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/master'
         run: |
           for attempt in {1..10}; do
             deployed_sha="$(curl --fail --silent --show-error \
