@@ -8,7 +8,10 @@ required_files=(
     ".well-known/brave-rewards-verification.txt"
     ".well-known/stuartmemo-release"
     "abbey-load/abbey-load.js"
+    "images/mcp-mpc.png"
     "index.html"
+    "mcp-mpc/index.html"
+    "mcp-mpc/samples/kick.wav"
     "qwerty-hancock/index.html"
     "qwerty-hancock/qwerty-hancock.js"
     "qwerty-hancock/qwerty-hancock.png"
@@ -24,6 +27,17 @@ for required_file in "${required_files[@]}"; do
         exit 1
     fi
 done
+
+mcp_sample_count="$(find "$site_dir/mcp-mpc/samples" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
+if [[ "$mcp_sample_count" != "16" ]]; then
+    echo "Expected 16 MCP MPC samples, found $mcp_sample_count." >&2
+    exit 1
+fi
+
+if ! grep -q 'href="/mcp-mpc/"' "$site_dir/index.html"; then
+    echo "Portfolio index does not link to MCP MPC." >&2
+    exit 1
+fi
 
 for forbidden_path in \
     .git .github components ops scripts README.md COMPONENTS.md DEPLOYMENT.md \
