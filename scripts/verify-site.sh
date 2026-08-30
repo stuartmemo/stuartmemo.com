@@ -34,6 +34,23 @@ if [[ "$mcp_sample_count" != "16" ]]; then
     exit 1
 fi
 
+mcp_bundle_src="$(sed -n 's/.*src="\(\/mcp-mpc\/assets\/index-[^"]*\.js\)".*/\1/p' "$site_dir/mcp-mpc/index.html" | head -n 1)"
+mcp_bundle="$site_dir$mcp_bundle_src"
+if [[ -z "$mcp_bundle_src" || ! -f "$mcp_bundle" ]]; then
+    echo "Could not resolve the MCP MPC JavaScript bundle." >&2
+    exit 1
+fi
+
+for webmcp_tool in \
+    mcpmpc_get_state mcpmpc_load_sample mcpmpc_assign_pad mcpmpc_configure_pad \
+    mcpmpc_chop_sample mcpmpc_create_sequence mcpmpc_play_pad mcpmpc_set_transport
+do
+    if ! grep -q "$webmcp_tool" "$mcp_bundle"; then
+        echo "MCP MPC bundle is missing WebMCP tool: $webmcp_tool" >&2
+        exit 1
+    fi
+done
+
 if ! grep -q 'href="/mcp-mpc/"' "$site_dir/index.html"; then
     echo "Portfolio index does not link to MCP MPC." >&2
     exit 1
