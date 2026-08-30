@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsLyrics" value="name:id;datatype:INTEGER,name:title;datatype:LONGCHAR,name:lyrics;datatype:LONGCHAR" />
+</info>

@@ -1,0 +1,163 @@
+
+<html>
+<head>
+<title>www.bisnation.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="extras/bis.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+  <TR> 
+    <TD> <IMG SRC="images/mock_01.gif" WIDTH=250 HEIGHT=7></TD>
+    <TD> <IMG SRC="images/mock_02.gif" WIDTH=250 HEIGHT=7></TD>
+    <TD> <IMG SRC="images/mock_03.gif" WIDTH=251 HEIGHT=7></TD>
+  </TR>
+  <TR> 
+    <TD> <IMG SRC="images/mock_04.gif" WIDTH=250 HEIGHT=65></TD>
+    <TD colspan="2"> 
+      
+    </TD>
+  </TR>
+</TABLE>
+<table width="751" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="250"><img src="images/blank.gif" width="250" height="1"></td>
+    <td><img src="images/blank.gif" width="250" height="1"></td>
+    <td><img src="images/blank.gif" width="251" height="1"></td>
+  </tr>
+  <tr> 
+    <td width="250" valign="top"> 
+      
+<script language="JavaScript">
+  var j,l="",m="",p="",q="",z="",list= new Array()
+  list[list.length]='images/random/1.jpg?&width=250&align=top';
+  list[list.length]='images/random/2.jpg?&width=250&align=top';
+  list[list.length]='images/random/3.jpg?&width=250&align=top';
+  list[list.length]='images/random/4.jpg?&width=250&align=top';
+  list[list.length]='images/random/5.jpg?&width=250&align=top';
+  list[list.length]='images/random/6.jpg?&width=250&align=top';
+  list[list.length]='images/random/7.jpg?&width=250&align=top';
+  list[list.length]='images/random/8.jpg?&width=250&align=top';
+  j=parseInt(Math.random()*list.length);
+  j=(isNaN(j))?0:j;
+  if (list[j].indexOf('?')==-1) {
+    document.write("<img src='"+list[j]+"'>");
+  }
+  else {
+    nvp=list[j].substring(list[j].indexOf('?')+2).split('&');
+    for(var i=0;i<nvp.length;i++) {
+      sub=nvp[i].split('=');
+   	  switch(sub[0]) {
+ 	    case 'link':
+          l="<a href='"+unescape(sub[1])+"'>";
+          p="</a>";
+		  break;
+	    case 'target':
+          q=" target='"+unescape(sub[1])+"'";
+  		  break;
+  	    default:
+          m+=" "+sub[0]+"='"+unescape(sub[1])+"'";
+  		  break;
+      }
+    }
+    z=(l!="")?((q!="")?l.substring(0,l.length-1)+q+">":l):"";
+    z+="<img src='"+list[j].substring(0,list[j].indexOf('?'))+"'"+m+">"+p;
+  document.write(z);
+  }
+</script>
+
+
+    </td>
+    <td bgcolor="#EA2B2C" valign="top"> 
+      
+<table cellspacing=4 cellpadding=0 width=245 border=0>
+  <tbody> 
+  <tr> 
+    <td valign="top"><a href="index.asp">NEWS</a></td>
+  </tr>
+  <tr> 
+    <td valign="top"><a href="tourdates.asp">TOUR DATES</a></td>
+  </tr>
+  <tr> 
+    <td valign="top"><a href="columns.asp">BAND INFORMATION</a></td>
+  </tr>
+  <tr> 
+    <td valign="top"><a href="discog.asp">OUTPUT</a></td>
+  </tr>
+  <tr> 
+    <td valign="top"><a href="merchandise.asp">MERCHANDISE</a></td>
+  </tr>
+  <tr> 
+    <td valign="top"><a href="multi.asp">MULTIMEDIA</a></td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="links.asp">LINKS</a>
+</td>
+  </tr>
+  </tbody> 
+</table>
+
+    </td>
+    <td bgcolor="#000000" valign="top"> 
+      <table cellspacing=4 cellpadding=0 width=245 border=0>
+        <tbody> 
+        <tr> 
+          <td><a href="columns.asp">COLUMNS</a></td>
+        </tr>
+        <tr> 
+          <td><a href="biog.asp">BIOGRAPHY</a></td>
+        </tr>
+        <tr> 
+          
+    <td><a href="press.asp">PRESS RESOURCES</a></td>
+        </tr>
+        <tr> 
+          
+    <td><a href="tech.asp">TECHNICAL INFORMATION</a></td>
+        </tr>
+        <tr> 
+          
+    <td><a href="faq.asp">FAQ</a></td>
+        </tr>
+        <tr> 
+          <td>&nbsp; </td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+  </tr>
+</table>
+<br>
+<table cellspacing=0 cellpadding=0 width=750 border=0>
+  <tbody> 
+  <tr> 
+    <td valign=top align=middle width=250>&nbsp; </td>
+    <td valign=top width=500> 
+      <table class=text cellspacing=4 cellpadding=0 width=500 border=0>
+        <tr> 
+          <td valign=top width=500 class="title">We're back! 
+            <p> 
+          </td>
+        </tr>
+        <tbody> 
+        <tr> 
+          <td valign=top width=500 class="copy"> 
+       
+<p>     
+After the fun we had in April doing the reunion gigs, we've decided to do some more for you.</p><p>
+		6th December - London, Islington Academy<a href="http://www.seetickets.com/see/event.asp?e%7Cartist=BIS&resultsperpage=20&filler1=see&filler2=art-srch"> - See Tickets</a><br>
+		7th December - Manchester University <a href="http://www.seetickets.com/see/event.asp?e%7Cartist=BIS&resultsperpage=20&filler1=see&filler2=art-srch"> - See Tickets</a><br>
+		8th December - Glasgow, Oran Mor (<a href="http://www.ticketmaster.co.uk/artist/783961/?search_redirect=bis&tm_link=tm_header_search">Ticketmaster</a>/<a href="www.gigsinscotland.com">GigsInScotland</a>/0870 169 0100/Tickets Scotland, 239 Argyle Street)</p>
+	
+            
+          </td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

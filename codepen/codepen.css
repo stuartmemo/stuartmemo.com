@@ -1,0 +1,34 @@
+body {
+    background-color: #C3222E;
+    font-family: arial, sans-serif;
+    margin: 1em; 
+    padding: 0;
+}
+
+h1 {
+    font-family: "myriad-pro-1", "myriad-pro-2", arial, sans-serif;
+    font-size: 28px;
+    margin: 0;
+    line-height: 2;
+}
+
+button {
+    font-size: 1em;
+    background-color: #007AAA;
+    border: 0;
+    color: white;
+    margin: 1em 0;
+    padding: 1em 2em;  
+}
+
+canvas {
+    background: white;
+    border: 1px solid #eee;
+    display: block;
+}
+
+.content {
+    background-color: #FFFFC8;
+    border: 1px solid #6F1717;
+    padding: 0.2em 2em 1em;
+}

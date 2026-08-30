@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>What's the Frequency Dennis? &mdash; Find out the frequency of anything</title>
+        <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <img class="the-abbey" src="dennis.gif" title="Dennis Wilson"/>
+            <div class="eye-eye left-eye"></div>
+            <div class="eye-eye right-eye"></div>
+            <h1>What's the Frequency Dennis?</h1>
+            <p>Need a simple way of finding out what frequency a sound is in real time? Already have a project that uses the Web Audio API? What's the Frequency Dennis? is just the thing.</p>
+            <p>You can just connect What's the Frequency Kenneth? just as you would any other Audio Node, with the side-effect of having a nice oscilloscope that you can control the look of.</p>
+            <h2>Demonstration</h2>
+            <div id="demo">
+                <span id="frequency">0Hz</span>
+                <span id="note">A0</span>
+                <input type="button" name="play" value="Play" id="play-btn" disabled="true"/>
+            </div>
+            <h2>Download</h2>
+            <p>The best way to start using What's the Frequency Dennis? is to grab it from <a href="https://github.com/stuartmemo/whats-the-frequency-dennis">GitHub</a>
+            <h2>How to use</h2>
+            <p>What's the Frequency Dennis? relies on a couple of things, namely:</p>
+            <ol>
+                <li>Your project must use the Web Audio API</li>
+                <li>You know who Greg Evigan is</li>
+            </ol>
+            <h3>Step 1. SRC-ya!</h3>
+            <p>Firsty, you'll need to reference Raphael and Wavy Jones after downloading them by doing something like this:</p>
+            <pre>&lt;script src="raphael-min.js"&gt;&lt;/script&gt;<br/>&lt;script src="/wavy-jones.js"&gt;&lt;/script&gt;</pre>
+
+            <h3>Step 2. Make space!</h3>
+            <p>You'll want somewhere to show your oscillator, so just create and empty div and give it an id like so:</p>
+            <pre>&lt;div id="oscilloscope"&gt;&lt;/div&gt;</pre>
+            <p>Don't forget get to give it a height and width!</p>
+            <pre>
+&lt;style&gt;
+    #oscilloscope {
+        width: 400px;
+        height: 200px;
+    }
+&lt;/style&gt;
+            </pre>
+
+            <h3>Step 3. Gonna get myself connected</h3>
+            <p>Wavy Jones is basically a normal Audio Analyser node wearing a sparkly jacket. This means you can connect it up just like you would any other audio node.</p>
+            <pre>
+var context = new webkitAudioContext(),
+    sineWave = context.createOscillator(),
+    myOscilloscope = new WavyJones(context, 'oscilloscope');
+
+sineWave.connect(myOscilloscope);
+myOscilloscope.connect(context.destination);
+
+sineWave.noteOn(0);</pre>
+            <h3>Ch-ch-ch-ch-changes</h3>
+            <p>It's easy to customise Wavy. You can change the thickness and colour of the line by doing something like this:</p>
+            <pre>
+oscilloscope.lineColor = '#EE0000';
+oscilloscope.lineThickness = 3;</pre>
+            <p>Super.</p>
+            <h2>Need help or have an idea to make WJ better?</h2>
+            <p>No problem, just give me a shout on <a href="http://twitter.com/stuartmemo">Twitter</a>.</p>
+            <footer>Copyright 2012 <a href="http://stuartmemo.com">Stuart Memo</a>.<br/>
+            Released under MIT licence.</footer>
+        </div>
+        <script src="../abbey-load/abbey-load.js"></script>
+        <script src="dennis.js"></script>
+        <script>
+            var context = new webkitAudioContext(),
+                sine = context.createOscillator(),
+                volume = context.createGainNode(),
+                source = context.createBufferSource(),
+                dennis = new Dennis(context, function (frequency, note) {
+                    document.getElementById('frequency').innerText = frequency;
+                    document.getElementById('note').innerText = note;
+                });
+                
+            volume.gain.value = 0.5;
+
+            source.connect(volume);
+            volume.connect(dennis);
+            dennis.connect(context.destination);
+
+            var assets = new AbbeyLoad( [{
+                    'whistle': 'whistle.ogg'
+                }], function (sounds) {
+                    document.getElementById('play-btn').disabled = false;
+                    source.buffer = sounds.whistle;
+                }
+            );
+
+            var play = function () {
+                source.noteOn(0);
+            };
+
+            document.getElementById('play-btn').addEventListener('click', play);
+
+        </script>
+        <script>
+            // Analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-32368229-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>

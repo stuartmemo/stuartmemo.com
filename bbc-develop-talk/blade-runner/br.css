@@ -1,0 +1,119 @@
+﻿/* AnythingZoomer */
+.az-wrap, .az-small, .az-large {
+	position: relative;
+}
+.az-wrap-inner {
+	display: block;
+	margin: 0 auto; /* center small & large content */
+}
+/* This wraps the large image and hides it */
+.az-zoom {
+    background: #AC2344;
+	border: #333 1px solid;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+	z-index: 100;
+	display: none;
+	-moz-box-shadow: inset 0px 0px 4px #000;
+	-webkit-box-shadow: inset 0px 0px 4px #000;
+	box-shadow: inset 0px 0px 4px #000;
+}
+/* Class applied to az-mover when large image is windowed */
+.az-windowed {
+	overflow: hidden;
+	position: absolute;
+}
+/* Class applied to az-mover when large image is fully shown */
+.az-expanded {
+	height: auto;
+	width: auto;
+	position: static;
+	overflow: visible;
+}
+
+/* overlay small area */
+.az-overlay {
+	background-color: #000;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	z-index: 10;
+}
+
+/* fade out small content when hovering
+.az-hovered > * {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+*/
+
+/* edit mode coordinate styling */
+.az-coords {
+	display: none; /* hidden when expanded */
+}
+
+.az-zoom .az-coords {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+}
+
+body {
+    width: 600px;
+    margin: auto;
+    background: #AC2344;
+    color:white;
+    font-family: arial;
+}
+input {
+    font: 16px "Lucida Grande", Verdana, sans-serif;
+    width: 400px;
+    height: 30px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 0;
+    margin: 20px auto;
+}
+
+.speech-container {
+    width: 600px;
+    text-align: center;
+}
+
+img {
+    display: none;
+}
+
+#start-button {
+    background-color: white;
+    background-image: url('mic.svg');
+    background-position: 10px;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 52px;
+    position: relative;
+    top: 17px;
+    width: 52px;
+}
+
+@-webkit-keyframes spin {
+    100% {
+        transform: rotate(30deg);
+    };
+}
+
+.spin {
+  animation: spin 1s linear;
+  animation-fill-mode: forwards
+}

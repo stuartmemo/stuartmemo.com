@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Bluetooth</title>
+    </head>
+    <body>
+        <button id="start">Start</button>
+        <script>
+        var handleCharacteristicValueChanged = function (event) {
+            var value = event.target.value;
+            var textDecoder = new TextDecoder(); // Used to convert bytes to UTF-8 string.
+            console.log('Received ' + textDecoder.decode(value));
+        };
+
+        document.querySelector('#start').addEventListener('click', function () {
+            navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
+            .then(device => device.gatt.connect())
+            .then(server => server.getPrimaryService('heart_rate'))
+            .then(service => service.getCharacteristic('heart_rate_measurement'))
+            .then(characteristic => {
+                console.log('started');
+                return characteristic.startNotifications()
+                .then(_ => {
+                    characteristic.addEventListener('characteristicvaluechanged',
+                        handleCharacteristicValueChanged);
+                    });
+                })
+            .then(_ => {
+                console.log('Notifications have been started.');
+                })
+            .catch(error => { console.log(error); });
+            });
+        </script>
+    </body>
+</html>

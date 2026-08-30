@@ -1,0 +1,9 @@
+[submodule "components/qwerty-hancock"]
+	path = components/qwerty-hancock
+	url = https://github.com/stuartmemo/qwerty-hancock.git
+[submodule "components/wavy-jones"]
+	path = components/wavy-jones
+	url = https://github.com/stuartmemo/wavy-jones.git
+[submodule "components/abbey-load"]
+	path = components/abbey-load
+	url = https://github.com/stuartmemo/abbey-load.git

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="173px" height="189px" viewBox="0 0 173 189" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Communication</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-23.3%" y="-19.0%" width="146.6%" height="140.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Working-with-you" transform="translate(-919.000000, -1198.000000)">
+            <g id="Maximising-User-Adoption" transform="translate(0.000000, 810.000000)">
+                <g id="Icons" transform="translate(269.000000, 383.000000)">
+                    <g id="Communication" transform="translate(670.000000, 21.000000)">
+                        <g id="Communication-Hexagon">
+                            <g id="Icon/Hexagon/Large" filter="url(#filter-1)">
+                                <polygon id="Path" fill="#383838" points="66.5 0.57518797 0.5 38.5371769 0.5 114.464491 66.5 152.424812"></polygon>
+                                <polygon id="Path" fill="#464646" transform="translate(99.000000, 76.924812) scale(-1, 1) translate(-99.000000, -76.924812) " points="132 1 66 38.9619889 66 114.889303 132 152.849624"></polygon>
+                                <path d="M66.5,0 L0,38.2495798 L0,114.752101 L66.5,153 L133,114.752101 L133,38.2495798 L66.5,0 Z M2.95555556,113.054361 L2.95555556,39.9473198 L66.5,3.39716109 L130.044444,39.9473198 L130.044444,113.054361 L66.5,149.601998 L2.95555556,113.054361 Z" id="Mask" fill="#656565"></path>
+                            </g>
+                            <g id="Communication-Icon" transform="translate(41.000000, 58.000000)" fill="#656565">
+                                <path d="M14.2823,20.8005 C12.7333,20.8005 11.4773,19.5365 11.4773,17.9955 C11.4773,16.4375 12.7333,15.1825 14.2823,15.1825 C15.8233,15.1825 17.0693,16.4375 17.0693,17.9955 C17.0693,19.5365 15.8233,20.8005 14.2823,20.8005 M24.7903,15.1825 L24.7903,0.0005 L0.0003,0.0005 L0.0003,49.5905 L16.3513,36.0265 C16.6363,35.7665 17.0433,35.6365 17.4423,35.6365 L24.7903,35.6365 L24.7903,20.8005 C23.2323,20.8005 21.9863,19.5365 21.9863,17.9955 C21.9863,16.4375 23.2323,15.1825 24.7903,15.1825" id="Fill-1"></path>
+                                <path d="M35.299,20.8005 C33.758,20.8005 32.494,19.5365 32.494,17.9955 C32.494,16.4375 33.758,15.1825 35.299,15.1825 C36.857,15.1825 38.112,16.4375 38.112,17.9955 C38.112,19.5365 36.857,20.8005 35.299,20.8005 Z M24.791,0.0005 L24.791,15.1825 C26.332,15.1825 27.595,16.4375 27.595,17.9955 C27.595,19.5365 26.332,20.8005 24.791,20.8005 L24.791,35.6365 L49.581,35.6365 L49.581,0.0005 L24.791,0.0005 Z" id="Fill-4" style="mix-blend-mode: screen;"></path>
+                            </g>
+                        </g>
+                        <g id="Group-7" transform="translate(9.000000, 110.000000)">
+                            <circle id="Oval-Copy-3" fill="#969696" cx="23" cy="23" r="23"></circle>
+                            <text id="3" font-family="Roboto-Bold, Roboto" font-size="25" font-weight="bold" letter-spacing="0.7692307" fill="#464646">
+                                <tspan x="15.4437538" y="32">3</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

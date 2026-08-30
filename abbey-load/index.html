@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Abbey Load &mdash; an asset loader for web audio projects</title>
+        <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <img class="the-abbey" src="abbey-load.gif"/>
+            <h1>Abbey Load</h1>
+            <p>Need a simple way of loading audio files into a project that uses the Web Audio API? Abbey Load is just the thing.</p>
+            <p>Specify the names and paths of your audio files along with a function to call when you're done and ready to have the time of your life.</p>
+            <h2>Download</h2>
+            <p>The best way to start using Abbey Load is to grab it from <a href="https://github.com/stuartmemo/abbey-load">GitHub</a>
+            <h2>How to use</h2>
+            <p>Abbey Load relies on a couple of things, namely:</p>
+            <ol>
+                <li>Your project must use the Web Audio API</li>
+                <li>You agree that Abbey Road and The White Album are the best Beatles records.</li>
+            </ol>
+            <p>More documentation to come, but this will get you going in the meantime:</p>
+            <pre>var assets = new AbbeyLoad( [{
+                 'hello': 'hello.ogg',
+                 'wat': 'wat.mp3'
+             }], function (buffers) {
+                // do something with ready to play buffers!
+             });
+             </pre>
+            <h2>Need help or have an idea to make AL better?</h2>
+            <p>No problem, just give me a shout on <a href="http://twitter.com/stuartmemo">Twitter</a>.</p>
+            <footer>Copyright 2012 <a href="http://stuartmemo.com">Stuart Memo</a>.<br/>
+            Released under MIT licence.</footer>
+        </div>
+        <script>
+            // Analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-32368229-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>

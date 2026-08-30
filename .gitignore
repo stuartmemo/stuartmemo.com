@@ -1,0 +1,24 @@
+/_site/
+
+# Generated from pinned component repositories by scripts/build-site.sh.
+/abbey-load/abbey-load.js
+/qwerty-hancock/qwerty-hancock.js
+/qwerty-hancock/qwerty-hancock.png
+/qwerty-hancock/style.css
+/wavy-jones/wj.js
+
+# Obsolete release machinery recovered from the old synth deployment.
+/synth/current
+/synth/releases/
+/synth/repo/
+/synth/revisions.log
+/synth/shared/
+
+# Recovered server debris and unreferenced backups are intentionally not published.
+.DS_Store
+._*
+npm-debug.log
+/bis/database/bis.mdb
+/images/images.tar.gz
+/polly-page.zip
+/scottishfunerals/scottishfunerals.tar.gz

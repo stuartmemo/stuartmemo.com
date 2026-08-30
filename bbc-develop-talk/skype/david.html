@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+    <head>
+        <title>David Eliza Bowie</title>
+        <style>
+            html {
+                background: #00AFF0; 
+            }
+
+            h1 {
+                margin: 5px;
+                font-family: Georgia;
+            }
+
+            div.container {
+                border-radius: 5px;
+                background: white;
+                width: 800px;
+                margin: 20px auto;
+                padding: 5px 10px;
+            }
+
+            img {
+                display: block;
+                margin: auto;
+            }
+
+            textarea, input {
+                display: block;
+                margin: 10px auto;
+                width: 600px; 
+                height: 200px;
+                font-size: 200%;
+            }
+
+            input[type="text"] {
+                font-size: 18px;
+                height: 20px; 
+            }
+
+            input[type="submit"] {
+               width: 100px; 
+            }
+        </style>
+    </head>
+        <body>
+            <div class="container">
+                <h1>David Bowie via Skype</h1>
+                <img src="david-bowie.jpg"/>
+                <form name="e_form">
+                    <textarea name="e_display"></textarea> 
+                    <input type="text" name="e_input"/>
+                    <input type="submit" value="Submit"/>
+                </form>
+            </div>
+
+            <script src="/abbeyload/abbeyload.js"></script>
+            <script src="david-audio.js"></script>
+            <script src="elizabot.js"></script>
+            <script src="elizadata.js"></script>
+            <script>
+                (function (window, undefined) {
+                    var eliza = new ElizaBot(),
+                        elizaLines = new Array(),
+                        displayCols = 60,
+                        displayRows = 4;
+
+                    document.forms[0].addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        elizaStep();
+                    }, false);
+
+                    function elizaReset() {
+                        eliza.reset();
+                        elizaLines.length = 0;
+                        elizaStep();
+                    }
+
+                    var playAudioFile = function (buffer) {
+                        var source = context.createBufferSource();
+                        source.buffer = soundToPlay;
+                        source.connect(context.destination);
+                        source.noteOn(0); // Play sound immediately
+                    };
+
+                    var context = new webkitAudioContext();
+                    var soundToPlay = [];
+
+                    var assets = new AbbeyLoad(davidAudio, function (buffs) {
+                            soundToPlay = buffs.reverb;
+                        });
+
+                    var sayWord = function (word) {
+                        playAudioFile(word);
+                    }
+
+                    var sayLine = function (line) {
+                        var words = line.toLowerCase().replace(/[\.,-\/#!$%\^&\*;:{}=?\-_`~()]/g,'').split(' ');
+                        words.forEach(function (word) {
+                            sayWord(word);
+                        })
+                    }
+
+                    function elizaStep() {
+                        var f = document.forms.e_form,
+                            userinput = f.e_input.value;
+
+                        if (eliza.quit) {
+                            f.e_input.value = '';
+                            if (confirm("This session is over.\nStart over?")) {
+                                elizaReset();
+                            } 
+                            f.e_input.focus();
+                            return;
+                        } else if (userinput != '') {
+                            var usr = '',
+                                rpl ='David: ' + eliza.transform(userinput);
+
+                            elizaLines.push(usr);
+                            elizaLines.push(rpl);
+
+                            sayLine(eliza.transform(userinput));
+                            // display nicely
+                            // (fit to textarea with last line free - reserved for extra line caused by word wrap)
+                            var temp  = [],
+                                l = 0;
+
+
+                            for (var i=elizaLines.length-1; i>=0; i--) {
+                                l += 1 + Math.floor(elizaLines[i].length/displayCols);
+                                if (l >= displayRows) break
+                                else temp.push(elizaLines[i]);
+                            }
+                            elizaLines = temp.reverse();
+                            f.e_display.value = elizaLines.join('\n');
+                        } else if (elizaLines.length == 0) {
+                            // no input and no saved lines -> output initial
+                            var initial = 'David: ' + eliza.getInitial();
+                            elizaLines.push(initial);
+                            f.e_display.value = initial + '\n';
+                        }
+                        f.e_input.value = '';
+                        f.e_input.focus();
+                    }
+                })(window);
+            </script>
+        </body>
+</html>

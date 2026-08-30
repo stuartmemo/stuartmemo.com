@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Skype</title>
+        <style>
+            html {
+                background: #00AFF0;
+            }
+
+            h1 {
+                margin: 5px;
+                font-family: Georgia;
+            }
+
+            div.container {
+                width: 600px;
+                margin: 20px auto;
+                position: relative;
+            }
+
+            div.hold-me {
+                border-radius: 5px;
+                background: white;
+                clear: both;
+                padding: 5px 10px;
+            }
+
+            img {
+                display: block;
+                margin: auto;
+            }
+
+            textarea, input {
+                display: block;
+                margin: 10px auto;
+                width: 570px;
+                height: 200px;
+                font-size: 200%;
+            }
+
+            input[type="text"] {
+                font-size: 18px;
+                height: 20px;
+            }
+
+            input[type="submit"] {
+               width: 100px;
+            }
+
+            #stage {
+                position: absolute;
+                top: 171px;
+                left: -10px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="skype.png" alt="" width="180" style="float: left;"/>
+            <div class="hold-me">
+                <h1>Adele (@adeleofficial)</h1>
+                <img src="connecting.jpg" alt="" width="580" id="david"/>
+                <div id="stage"></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script>
+        <script src="bonsai.js"></script>
+        <script>
+            $(function () {
+                var context = new AudioContext(),
+                    osc = context.createOscillator(),
+                    gainNode = context.createGain(),
+                    analyser = context.createAnalyser(),
+                    freqData = new Uint8Array(analyser.frequencyBinCount),
+                    noDataPoints = 10;
+
+                osc.connect(gainNode);
+                gainNode.connect(analyser);
+
+                gainNode.gain.value = 1;
+
+                var movie = bonsai.run(document.getElementById('stage'), {
+                    code: function () {
+                        var m = new Ellipse(310, 280, 35, 5)
+                            .addTo(stage)
+                            .attr('fillColor', 'black')
+                            .attr('strokeColor', 'red')
+                            .attr('strokeWidth', 4);
+
+                        stage.on('message', function (data) {
+                            if (data.lp < 1.01) {
+                                m.attr('radiusY', data.lp);
+                            } else {
+                                m.attr('radiusY', data.lp * 14);
+                            }
+                        })
+                    },
+                    width: 600,
+                    height: 500
+                });
+
+                movie.on('load', function () {
+                    var drawMouth = function () {
+                        var loudestPoint = 0,
+                            bassCount = 0,
+                            midCount = 0,
+                            trebleCount = 0,
+                            loudestFreq = 'low';
+
+                        analyser.getByteTimeDomainData(freqData);
+
+                        for (var i = 0; i < freqData.length; i++) {
+                            if (i % noDataPoints) {
+                                var point = (freqData[i] / 128);
+                                if (point > loudestPoint) {
+                                    loudestPoint = point;
+                                    if (i < 400) {
+                                        bassCount++;
+                                    } else if (i < 700) {
+                                        midCount++;
+                                    } else {
+                                        trebleCount++;
+                                    }
+                                }
+                            }
+                        }
+
+                        if (midCount > bassCount) {
+                            loudestFreq = 'mid';
+                        } else if (trebleCount > midCount) {
+                            loudestFreq = 'high';
+                        }
+
+                        movie.sendMessage({lp: loudestPoint, lf: loudestFreq});
+
+                        setTimeout(drawMouth, 50);
+                    };
+
+                    drawMouth();
+                });
+
+                document.getElementById('david').addEventListener('click', function () {
+                    document.getElementById('david').setAttribute('src', 'adele-cropped.jpg');
+                    $('#stage').show();
+                });
+
+                var gotStream = function (stream) {
+                    var vocals = context.createMediaStreamSource(stream);
+                    vocals.connect(analyser);
+                };
+
+                navigator.webkitGetUserMedia({audio: true}, gotStream, function () {
+                    console.log('no stream');
+                });
+            });
+        </script>
+    </body>
+</html>

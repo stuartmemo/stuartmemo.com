@@ -1,0 +1,2 @@
+DirectoryIndex index.asp index.htm
+AddType text/html .asp

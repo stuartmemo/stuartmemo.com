@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsAddMerch" value="name:id;datatype:INTEGER,name:Item;datatype:LONGCHAR,name:Description;datatype:LONGCHAR,name:Image;datatype:LONGCHAR,name:Price;datatype:LONGCHAR" />
+</info>

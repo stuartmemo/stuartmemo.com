@@ -1,0 +1,633 @@
+/*
+*	This version 3 aims to make the block and inline-block styling the default and extend it up to all screen widths.
+*	Responsive behaviour will act mainly through switching some columns from inline-block to block, and altering column
+*	widths.
+*/
+
+
+/*___Tags___*/
+
+select {
+	width:200px;
+	max-width:97%;
+	height:25px;
+	padding:0px 0px 0px 6px;
+	margin:0;
+
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	
+	border:1px inset #f2f2f2;
+	-moz-box-shadow: 0px 1px 0px #f2f2f2;
+	-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+	
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+.small {
+	font-size:11px;
+}
+
+#printHeader {
+	display:none;
+}
+
+/* -------- Main sections -------------------------------------------- */
+
+body {
+	--font-family: Georgia,"Times New Roman",Times,serif; /* orig */
+	/* from rw_common/themes/delta/styles.css: conflict with info box div borders */
+	--font: 0.85em/1.6em "Lucida Grande", Lucida, Verdana, sans-serif;
+	--font: 13px/1.4em Georgia,"Times New Roman",Times,serif; /* fix */
+}
+
+#quotationTool {
+	margin:0px;
+	padding:0px;
+}
+
+.clearer {
+	height:0;
+	clear:both;
+}
+
+/* ---------- MAIN TABLE - start ------------------------------ */
+
+table#quotationTable {
+	width:100%;
+	margin:0 auto; 
+	margin:10px 0px 0px 0px;
+	--border-collapse:collapse;
+}
+
+th, td {
+	vertical-align:middle;
+	text-align:left;
+	position:relative; /* for positioning infoBoxes */
+}
+
+/* --------- Named Rows ---------- */
+
+tr.subSectionRow  {}
+
+tr.optionRow {}
+
+tr#packageType td {
+}
+
+tr.subSectionRow td {
+	padding:4px 0px 4px 8px;
+	background:#ccc;
+  background:#AB9D90;
+  background:url(../../../images/mainMenu_bg.png) top repeat-x;
+	font-weight:bold;
+}
+
+	tr.optionRow {
+		--display:block !important;
+		display:block;
+		overflow: auto; /* to prevent collapsing top margins */
+		margin:0;
+		--padding:10px 0 10px 0px;
+		border-bottom:1px solid #ccc;
+		border-bottom:0.5px solid #e6e6dd;
+		border-bottom:1px solid #e6e6dd;
+		--border-bottom:1px solid green;
+	}
+	tr.optionRow:hover {
+		background:#e6e6dd;
+		--background:url(../../../images/background/transp-black/black-15.png) top left repeat;
+	}
+	tr.optionRow:hover td {
+		--background:#e6e6dd;
+		background:none;
+	}
+
+
+
+/* -------- Named Columns -------- */
+/*
+td.labelCol							{	background:LightGreen;		}
+td.selectorCol 					{	background:Khaki;				}
+td.infoCol							{	background:LightSkyBlue;	}
+td.subtotalCol 					{	background:LightCoral;		}
+*/
+
+td.selectorCol input[type="checkbox"] { /* keep */
+	position:relative;
+	top:1px;
+}
+
+
+	/*
+	td.labelCol			{	background:MediumAquamarine;	}
+	td.selectorCol 	{	background:Gold;					}
+	td.infoCol			{	background:CornflowerBlue;		}
+	td.subtotalCol 	{	background:Crimson;				}
+	*/
+	
+	/* All cols */
+	td.labelCol,
+	td.selectorCol,
+	td.infoCol,
+	td.subtotalCol {
+		box-sizing: border-box;
+		display: inline-block;
+		margin:8px 0 8px 0;
+		padding:0;
+	}
+	td.labelCol {
+		padding:0 10px 0 0;
+	}
+
+	/* 
+		Move Label above input widget for dropdowns, radio buttons and popup selectors, not checkboxes.
+		TODO - make this responsive below npx
+	*/
+	
+	tr.optionRow#packageType td {
+	}
+
+	/* ------ Set column widths for all and individual widgets ----- */
+	
+	tr.optionRow#packageType 	td.labelCol 	{ width:80%; }
+	
+	tr.optionRow.dropdown		td.labelCol 	{ width:40%; }
+	tr.optionRow.dropdown		td.selectorCol { width:35%; }
+	
+	tr.optionRow.radio			td.labelCol 	{ width:40%; }
+	tr.optionRow.radio			td.selectorCol { width:35%; }
+	
+	tr.optionRow.popupSelector td.labelCol 	{ width:40%; }
+	tr.optionRow.popupSelector td.selectorCol { width:35%; }
+	
+	tr.optionRow.checkbox 		td.labelCol 	{ width:60%; }
+	tr.optionRow.checkbox 		td.selectorCol { width:15%; }
+	
+	tr.optionRow 					td.infoCol 		{ width:5%; text-align:right; }
+	tr.optionRow 					td.subtotalCol { width:20%; }
+
+	/* ------ Responsive columns for individual widgets ----- */
+
+@media screen and (max-width: 600px) {
+	tr.optionRow.dropdown			td.labelCol 	{ display: block; width:100%; margin:6px 0 -3px 0; }
+	tr.optionRow.dropdown			td.selectorCol { width:75%; text-align:right; padding-right:10px; }
+}
+@media screen and (max-width: 400px) {
+	tr.optionRow.dropdown			td.selectorCol { text-align:left; padding-left:10px; }
+
+	tr.optionRow.radio				td.labelCol 	{ display: block; width:100%; margin:6px 0 -5px 0; }
+	tr.optionRow.radio				td.selectorCol { width:75%; text-align:left; padding-left:10px; }
+	
+	tr.optionRow.popupSelector		td.labelCol 	{ display: block; width:100%; margin:6px 0 -3px 0; }
+	tr.optionRow.popupSelector		td.selectorCol { width:75%; text-align:left; padding-left:10px; }
+}
+
+
+/* ----- Individual Rows/Cells ----- */
+
+td.note{						--unused?
+	padding-top:0px;
+}
+
+th, #footerRow td {
+	background:#ccc; 
+	background:url(../../../images/mainMenu_bg.png) top repeat-x;
+	background: transparent url(../../../images/background/transp-black/black-20.png) repeat scroll left top;     
+	border:none;
+	padding:10px 12px 10px 0px;
+	font-weight:bold;
+}
+tr.last td {
+	padding-bottom:20px;
+}
+td.submit {
+	padding:20px 0px 0px 0px;
+}
+
+
+/* ------- Named Table Contents ------- */
+
+.comment,
+.subtotal {
+	color:green;
+}
+.subtotal,
+.total {
+	text-align:right;
+}
+.subtotal,
+td#totalCol,
+#total {
+	font-family:"Arial";
+}
+
+	.subtotal {
+		line-height:25px;
+	}
+
+
+.startUndisplayed,
+tr.startUndisplayed {
+ display:none;
+}
+
+td#totalCol,
+#total {
+	font-size:16px;
+	text-align:right;
+	color:green;
+}
+#total {
+	padding-left:20px;
+}
+
+
+/* -------- Crematorium/Cemetery Options ---------- */
+
+tr.crematoriumOptions td,
+tr.burialOptions td {
+	background:#ddd;
+}
+
+
+/* -------- Info Button and Box 2 ---------- */
+
+.infoCol a,
+.infoCol span {
+	font-size:12px;
+	font-weight:bold;
+	padding:0px 4px;
+	border: 1px outset #999;
+	background-color:#494;
+	text-decoration:none;
+	color:#fff;
+	cursor:pointer;
+	font-family:"Arial";
+}
+.infoCol a:hover,
+.infoCol span:hover {
+	border: 1px inset #999;
+	background-color:#383;
+}
+
+	.infoButton {
+		height:25px;
+		width:17px;
+		float:right;
+		--background:url(../../../images/calculator/infoButton.png) 0 0;
+		background:url(../../../images/calculator/infoButton-high.png) no-repeat 0px 4px;
+	}
+	.infoButton:hover {
+		--background:url(../../../images/calculator/infoButton.png) 0 17px;
+		background:url(../../../images/calculator/infoButton-high.png) no-repeat 0px -30px;
+		cursor:pointer;
+	}
+
+.infoBoxWrapper2 {
+	display:none;
+}
+.infoBox2 {
+	padding:0px 5px 2px 5px;
+}
+.infoBox2 div {
+	font: 13px/1.2em Georgia,"Times New Roman",Times,serif;
+	margin:0px 0px 0px 0px;
+	padding:10px;
+	position:relative;
+	--top:1px;
+	background:#ffd;
+	background:#eec;
+	border:1px solid #672;
+	cursor:pointer;
+}
+.xClose2 {
+	font:14px sans-serif;
+	visibility:hidden;
+	position:absolute;
+	top:1px;
+	right:5px;
+	z-index:200;
+}
+
+
+
+/* ----- Selector popup - start (see also thickbox.css) ----------------------- */
+/* ---- Stuff in the popup itself -> calculator-thickbox.css ---------- */
+
+/* The button */
+.popupSelectorLink a, 
+button {
+	display: inline-block;
+	--width: 140px;
+	padding:5px 15px;
+		
+	border: 1px solid #556f8c;
+	color:#555;
+	
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	
+	-moz-box-shadow: 0px 1px 0px #f2f2f2;
+	-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+	box-shadow: 0px 1px 0px #f2f2f2;
+	
+	font-family: sans-serif;
+	background-color:#ccc;
+	text-decoration:none;
+	font-size: 14px;
+	cursor: pointer;
+}
+.popupSelectorLink a:hover,
+button:hover {
+	background-color:#bbb;
+	color:black;
+	text-decoration:none;
+}
+
+
+td.bottom {
+	vertical-align:bottom;
+}
+
+.red {
+	color:red;
+}
+input#postcode {
+	border-color:red;
+}
+
+
+/* -------- Selected item from Selector popup - start --------------- */
+
+.selectorWrapper {
+	--border:1px solid blue;	
+	--background:pink;
+}
+
+.selectedItemName {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: rgba(255,255,255,0.5);
+	--background:url(../../../images/background/transp-black/black-15.png) top left repeat;
+	line-height: 1.2;
+	font-size:13px;
+	text-shadow: 0.6px 0.6px #fff;
+	margin: 0px;
+	padding: 2px 3px;
+	z-index:100;
+}
+.selectedItemsWrapper {       
+	--background:green;
+	--border:1px solid green;
+	position:relative;
+	height:120px;
+}
+.selectedItemWrapper { 
+	display: inline-block;
+	position:relative; 
+	--left:60px;
+	--border:1px solid lightgreen;
+	float:left; /* imortant - removes space below image. Used without clearfix in parent */
+	--background:lightgreen;
+
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.15);	
+}
+img.selectedImage {
+	max-height:120px !important;
+	max-width:160px !important;
+	margin:0 !important; 
+	padding:0 !important;
+	float:left;
+}
+
+.changeLinks {
+	display: block;
+	height:100%;
+	width:60px;
+	float:left;
+	--background:orange;
+	--border:1px solid orange;	
+}
+.changeLinksWrapper { /* for vert positioning */
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+.popupReselectLink,
+.clearLink {
+	display:block;
+	cursor:pointer;
+	text-decoration:none;
+	color: #0055A5;
+}
+.popupReselectLink {
+	padding-bottom:6px;
+}
+.popupReselectLink:hover,
+.clearLink:hover {
+	text-decoration:underline;
+}
+
+/* -------- Selected item from Selector popup - end --------------- */
+
+/* -------- Selector popup - end --------------- */
+
+
+
+/* -------- Contact Details Table -------------------- */
+#formChoices {
+	margin:20px 0;
+}
+#formChoices .row {
+	padding:10px 0px;
+}
+#formChoices label {
+	display:inline-block;
+	width:140px;
+}
+#formChoices input {
+	padding:2px 4px;
+	width:200px;
+}
+#formChoices button {
+	margin-top:5px;
+}
+#formChoices #contactDetails {
+	margin:10px 0px 0px 10px;
+	--background:pink;
+}
+#printInfo {
+	display:none;
+}
+/* -------- Contact Details Table - end -------------- */
+
+
+
+/* ------------- CUSTOM RADIO BUTTONS - start ---------- */
+.radioButtonGroup,
+.radioButtonGroup * {
+	box-sizing: border-box;
+}
+.radioButtonGroup {
+    display:block;
+    position:relative;
+    text-align:center;
+    margin:0 auto;
+}
+
+.radioButtonGroup .radioButtonRow {
+    vertical-align:top;
+}
+.radioButtonGroup .radioButtonWrapper {
+    display:inline-block;
+    margin:0px 5px;
+    padding:0;
+    position:relative;
+    width:260px;
+}
+
+.radioButtonGroup .radioButton {
+    display:inline-block;
+    position:relative;
+    width:260px;
+    height:40px;
+}
+
+.radioButtonGroup .radioButtonDescriptor {
+	text-align:left;
+	padding:2px 4px 3px 4px;
+	background: transparent url(../../../images/background/transp-black/black-10.png) repeat scroll left top;
+	font-size: 13px;
+}
+
+.radioButtonGroup .radioButton label,
+.radioButtonGroup .radioButton input {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    line-height:30px;
+}
+
+.radioButtonGroup .radioButton input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.radioButtonGroup .radioButton label {
+	color:#ddd;
+	padding:5px;
+	background: transparent url(../../../images/background/transp-black/black-70.png) repeat scroll left top;
+	cursor:pointer;
+	z-index:90;
+	font-size: 15px;
+	text-align:center;
+	width:100%;
+}
+
+.radioButtonGroup .radioButton label:hover,
+.radioButtonGroup .radioButton input[type="radio"]:checked + label {
+	background: transparent url(../../../images/background/transp-black/black-80.png) repeat scroll left top;     
+	color: #D7C793;
+}
+/* ------------- CUSTOM RADIO BUTTONS - end ------------ */
+
+
+/* ------------- Full Calculator items - start ---------------- */
+
+#anyOtherRequirementsWrapper {
+	padding-top:20px;
+}
+#anyOtherRequirements {
+	box-sizing: border-box;
+	width:100%;
+	height:60px;
+   padding: 6px 6px 0px 6px;
+   margin:0;
+   
+   border-radius: 3px;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   
+   border:1px inset #f2f2f2;
+   -moz-box-shadow: 0px 1px 0px #f2f2f2;
+   -webkit-box-shadow: 0px 1px 0px #f2f2f2;
+   
+   font-family: sans-serif;
+}
+#anyOtherRequirements:active {
+	width:100%;
+}
+#anyOtherRequirements:focus {
+   background: #728eaa;
+   background:#ddd;
+}
+/* ------------- Full Calculator items - end ---------------- */
+
+
+/* ---------- For post-submission message in highlighted box with close button ------------- */
+div.formResponseMessage {
+	padding:3px 3px 3px 6px;		
+	position:relative; 
+	vertical-align:middle; 
+}
+div.formResponseMessage * {
+	line-height:1.4;
+	padding:0;
+}
+div.msgPos {
+	background:#ccffcc;
+	border:1px solid #99ff99;
+}
+div.msgNeg {
+	background:#ffcccc;
+	border:1px solid #ff9999;
+}
+
+div.formResponseMessage button,
+div.formResponseMessage .button {
+	float:right; 
+	width:40px; 
+	height:40px; 
+	font-size:16px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+div.formResponseMessage .button {
+	line-height:40px;
+	text-align:center;
+	cursor:pointer;
+}
+
+div.msgPos button,
+div.msgPos .button {
+	background:#bbf6bb;
+	border:1px solid #99ff99;
+}
+div.msgNeg button,
+div.msgNeg .button {
+	background:#f6bbbb;
+	border:1px solid #ff9999;
+}
+
+div.msgPos button:hover,
+div.msgPos .button:hover {
+	background:#aaf6aa;
+}
+div.msgNeg button:hover,
+div.msgNeg .button:hover{
+	background:#f6aaaa;
+}
+
+/* ---- For Pos/Neg message in highlighted box - end ------------- */

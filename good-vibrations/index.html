@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Good Vibrations</title>
+        <style>
+            button {
+                font-size: 18px;
+                padding: 1em 2em;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Everybody Crazy Shake</button>
+        <script>
+            document.querySelector('button').addEventListener('click', function () {
+                window.navigator.vibrate([
+                    300, 800,
+                    300, 100,
+                    300, 100,
+                    300, 1000,
+                    300, 100,
+                    300, 100,
+                    300, 1000,
+                    300, 100,
+                    300, 100,
+                    2000, 0
+                ]);
+            });
+        </script>
+    </body>
+</html>

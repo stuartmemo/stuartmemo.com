@@ -1,0 +1,62 @@
+/*
+* Styles for specific slides (on a specific page)
+*/
+
+
+.royalSlider {
+  margin:0 auto;
+  --border-bottom:1px solid #294B9C;
+  --border-bottom:1px solid blue;
+  width:600px; /* GA - changed 30/1/13 */
+  height:285px; /* GA - changed 30/1/13 */
+  --border:1px solid red;
+
+}
+#rs-homePageImages { /* GA - overrides .royalSlider */
+  margin:0 auto;
+  margin-bottom:20px;
+  width:600px; /* GA - same as image width */
+  height:285px; /* GA - changed 30/1/13 */
+  overflow:hidden;
+}
+
+.royalSlider > .rsContent {
+	display:none;
+}
+
+#rs-homePageImages .rsContent {
+  --color: red;
+  font-size: 24px;
+  line-height:0;
+  --float: left;
+}
+
+#rs-homePageImages .bContainer {
+  position: relative;
+  padding:0;
+  margin:0;
+  height:100%;
+	float: left;
+}
+
+#rs-homePageImages .rsABlock {
+	left:10px;
+  top:auto;
+	bottom:10px;
+	position: absolute;
+	z-index: 15;
+  padding:5px 20px 5px 10px;
+  background-color:rgba(0,0,0,0.6);
+  color:#fff;
+}
+#rs-homePageImages .rsABlock p {
+	padding:0;
+  margin:0;
+  font-size:130%;
+  font-weight:300;
+  font-family:Garamond,sans-serif;
+  font-family:"SnellRoundhandW01-Scrip";
+  font-family: 'Lato', sans-serif;
+  --font-style:italic;
+  line-height:1;
+}

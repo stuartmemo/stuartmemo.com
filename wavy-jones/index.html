@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Wavy Jones &mdash; an oscilloscope for web audio projects</title>
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <img class="the-abbey" src="wavy-jones.gif"/>
+            <div class="eye-eye left-eye"></div>
+            <div class="eye-eye right-eye"></div>
+            <h1>Wavy Jones</h1>
+            <p>Need a simple way of showing what your audio looks like in real time? Already have a project that uses the Web Audio API? Wavy Jones is just the thing.</p>
+            <p>You can just connect Wavy Jones just as you would any other Audio Node, with the side-effect of having a nice oscilloscope that you can control the look of.</p>
+            <h2>Demonstration</h2>
+            <div id="oscilloscope"></div>
+            <input type="button" name="sine" value="Sine" id="sine-btn"/>
+            <input type="button" name="saw" value="Saw" id="saw-btn"/>
+            <input type="button" name="triangle" value="Triangle" id="triangle-btn"/>
+            <input type="button" name="square" value="Square" id="square-btn"/>
+            <input type="button" name="stop" value="Stop the madness!" id="stop-btn"/>
+            <h2>Download</h2>
+            <p>The best way to start using Wavy Jones is to grab it from <a href="https://github.com/stuartmemo/wavy-jones">GitHub</a>
+            <h2>How to use</h2>
+            <p>Wavy Jones relies on a couple of things, namely:</p>
+            <ol>
+                <li>Your project must use the Web Audio API</li>
+                <li>You know who Greg Evigan is</li>
+            </ol>
+            <h3>Step 1. SRC-ya!</h3>
+            <p>Firsty, you'll need to reference Wavy Jones after downloading it by doing something like this:</p>
+            <pre>&lt;script src="/wavy-jones.js"&gt;&lt;/script&gt;</pre>
+
+            <h3>Step 2. Make space!</h3>
+            <p>You'll want somewhere to show your oscillator, so just create and empty div and give it an id like so:</p>
+            <pre>&lt;div id="oscilloscope"&gt;&lt;/div&gt;</pre>
+            <p>Don't forget get to give it a height and width!</p>
+            <pre>
+&lt;style&gt;
+    #oscilloscope {
+        width: 400px;
+        height: 200px;
+    }
+&lt;/style&gt;
+            </pre>
+
+            <h3>Step 3. Gonna get myself connected</h3>
+            <p>Wavy Jones is basically a normal Audio Analyser node wearing a sparkly jacket. This means you can connect it up just like you would any other audio node.</p>
+            <pre>
+var context = new AudioContext(),
+    sineWave = context.createOscillator(),
+    myOscilloscope = new WavyJones(context, 'oscilloscope');
+
+sineWave.connect(myOscilloscope);
+myOscilloscope.connect(context.destination);
+
+sineWave.start(0);</pre>
+            <h3>Ch-ch-ch-ch-changes</h3>
+            <p>It's easy to customise Wavy. You can change the thickness and colour of the line by doing something like this:</p>
+            <pre>
+oscilloscope.lineColor = '#EE0000';
+oscilloscope.lineThickness = 3;</pre>
+            <p>Super.</p>
+            <h2>Need help or have an idea to make WJ better?</h2>
+            <p>No problem, just give me a shout on <a href="http://twitter.com/stuartmemo">Twitter</a>.</p>
+
+            <p>Find this useful? Buy me a drink with bitcoins!</p>
+            <a class="coinbase-button" data-code="f6756e9752c335293698e1d4d6a9666f" data-button-style="donation_small" href="https://coinbase.com/checkouts/f6756e9752c335293698e1d4d6a9666f">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+            <footer>Copyright 2012-14 <a href="http://stuartmemo.com">Stuart Memo</a>.<br/>
+            Released under MIT licence.</footer>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="wj.js"></script>
+        <script>
+            $(function () {
+                var context = new AudioContext(),
+		    oscillator = context.createOscillator(),
+                    gainNode = context.createGain(),
+                    oscilloscope = new WavyJones(context, 'oscilloscope');
+
+                gainNode.gain.value = 0.4;
+                gainNode.connect(oscilloscope);
+                oscilloscope.connect(context.destination);
+
+                var inputs = document.getElementsByTagName('input');
+
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].addEventListener('click', function () {
+                        switch (this.name) {
+                            case 'square':
+                                oscillator.disconnect();
+				oscillator = context.createOscillator();
+                                oscillator.type = 'square';
+				oscillator.connect(gainNode);
+                        	oscillator.start(0);
+                                break;
+                            case 'saw':
+                                oscillator.disconnect();
+				oscillator = context.createOscillator();
+                                oscillator.type = 'sawtooth';
+				oscillator.connect(gainNode);
+                        	oscillator.start(0);
+                                break;
+                            case 'triangle':
+                                oscillator.disconnect();
+				oscillator = context.createOscillator();
+                                oscillator.type = 'triangle';
+				oscillator.connect(gainNode);
+                        	oscillator.start(0);
+                                break;
+                            case 'stop':
+                                oscillator.disconnect();
+                                break;
+                            default:
+                                oscillator.disconnect();
+				oscillator = context.createOscillator();
+                                oscillator.type = 'sine';
+				oscillator.connect(gainNode);
+                        	oscillator.start(0);
+                                break;
+                        };
+                    });
+                }
+           });
+
+        </script>
+        <script>
+            // Analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-32368229-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>

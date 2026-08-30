@@ -1,0 +1,23 @@
+<!doctype>
+<html>
+    <head>
+        <title>Tambourine</title>
+    </head>
+    <body>
+        <p>Hi there.</p>
+        <p id="api"></p>
+        <script>
+            if (window.DeviceMotionEvent) {
+                document.getElementById('api').innerText = 'Accelorometer available.';
+            } else {
+                document.getElementById('api').innerText = 'naw';
+            }
+
+            var context = new webkitAudioContext();
+            var sineWave =context.createOscillator();
+            
+            sineWave.connect(context.destination);
+            sineWave.noteOn(0);
+        </script>
+    </body>
+</html>

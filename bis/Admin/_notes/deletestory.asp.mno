@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsAmendStory" value="name:id;datatype:INTEGER,name:headline;datatype:LONGCHAR,name:summary;datatype:LONGCHAR,name:body;datatype:LONGCHAR,name:calendar;datatype:LONGCHAR" />
+</info>

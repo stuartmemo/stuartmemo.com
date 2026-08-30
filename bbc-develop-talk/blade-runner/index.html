@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Blade Runner Voice + Enhance</title>
+        <link rel="stylesheet" href="br.css"/>
+    </head>
+    <body id="image">
+        <h1>Web Speech API</h1>
+        <div class="zoom">
+            <div class="small">
+                <img src="blade-small.jpg" alt="small blade"/>
+            </div>
+            <div class="large">
+                <img src="blade-large.jpg" alt="big blade"/>
+            </div>
+        </div>
+        <div class="speech-container">
+            <input id="text-in" type="text" x-webkit-speech onwebkitspeechchange='enhance()' />
+            <button id="start-button"></button>
+        </div>
+        <h2>Enhance</h2>
+        <p>Click the mic icon, say "enhance 315106"!</p>
+        <p>You can say any "enhance" with any 6 digit number and you'll zoom in on those co-ordinates.</p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="jquery.anythingzoomer.js"></script>
+        <script>
+            var recognition = new webkitSpeechRecognition();
+
+            recognition.onstart = function () {
+                $('#start-button').css({
+                    backgroundColor: '#6BFFA6'
+                });
+            };
+
+            recognition.onresult = function(event) {
+              $('#text-in').val(event.results[0][0].transcript);
+            }
+
+            recognition.onend = function () {
+                $('#start-button').css({
+                    backgroundColor: 'white'
+                });
+                enhance();
+            };
+
+            $('#start-button').click(function () {
+                recognition.lang = "en-GB";
+                recognition.start();
+            });
+
+            $('img').show();
+            $('.zoom').anythingZoomer({
+                overlay: true,
+                edit: true,
+                offsetX: 0,
+                offsetY: 0
+            });
+
+            var zoomedAndRotated = false;
+
+            function enhance() {
+                var whatWasSaid = $('#text-in').val();
+
+                whatWasSaid = whatWasSaid.replace(/\s/g, '');
+
+                if (zoomedAndRotated) {
+                    $('.az-zoom').html(
+                        '<video src="nyanboy.mp4" autoplay="autoplay" width="180" height="180"></video>'
+                    );
+                }
+
+                if (whatWasSaid.match('enhance')) {
+                    var numbers = whatWasSaid.match(/\d+/);
+                    if (numbers !== null) {
+                        $('.zoom').anythingZoomer((numbers[0] + '').substr(0,3), (numbers[0] + '').substr(3,6));
+                    } else {
+                        $('.zoom').anythingZoomer('300', '170');
+                    }
+                }
+
+                if (whatWasSaid.match('rotate')) {
+                    $('.az-zoom').addClass('spin');
+                    zoomedAndRotated = true;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+/*
+* Vehicles slider
+*
+*
+*/
+
+
+.royalSlider {
+	margin:0 auto;
+	width:600px;
+}
+
+.rsSlide {
+  --height:auto;
+}
+
+.bContainer {
+	position:relative;
+}
+
+.rsImg {
+	margin:0 auto;
+}
+
+.rsABlock {
+	top:auto;
+	bottom:5px;
+	left:5px;
+	--ight:auto;
+	color:#fff;
+	--line-height:20px;
+	background-color:#ccc;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	padding:5px;
+}
+
+.rsThumbs {
+    cursor: default;
+}
+
+.rsThumb {
+    cursor: pointer;
+}

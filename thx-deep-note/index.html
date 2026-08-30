@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>THX</title>
+    </head>
+    <body>
+        <h1>THX Sound</h1>
+        <button id="play">Play</button>
+        <div id="timer"></div>
+        <script src="tsw-core.js"></script>
+        <script src="thx-deep-note.js"></script>
+        <script>
+            var time_guy = document.getElementById('timer');
+
+            (function timer () {
+                time_guy.innerText = tsw.now();
+                setTimeout(timer, 100)
+            })();
+
+            document.getElementById('play').addEventListener('click', function () {
+                play();
+            });
+        </script>
+    </body>
+</html>

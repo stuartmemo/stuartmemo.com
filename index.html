@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
         <title>Stuart Memo</title>
+        <meta name="description" content="A collection of demos, tutorials and various things related to the Web Audio API."/>
         <meta name="author" content="Stuart Memo"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <script src="//use.typekit.net/iij2wcl.js"></script>
+        <script src="//use.typekit.net/enw0xku.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         <style>
             html, body {
@@ -17,17 +18,13 @@
 
             #container {
                 margin: auto;
-                width: 99%;
+                width: 100%;
             }
 
             ul {
                 margin: 0;
                 padding: 0;
                 list-style: none;
-            }
-
-            .tiles {
-                position: absolute;
             }
 
             .tiles li {
@@ -79,10 +76,12 @@
                 visibility: visible;
             }
 
-            .bg, .fg {
+            .tiles, .bg, .fg {
                 position: absolute;
+                width: 100%;
+                height: 100%;
             }
-                                
+
             .bg li {
                 background: blue;
                 height: 25px;
@@ -94,6 +93,13 @@
     <body>
         <div id="container">
             <ul id="movies" class="tiles">
+                <li><img src="images/raygum.png"/>
+                <li><img src="images/sodaphonic.png"/>
+                <li><img src="images/help-me.png"/>
+                <li><img src="images/surfs-up.png"/>
+                <li><img src="images/thx.jpg"/>
+                <!--                <li><img src="images/beat-petite.png"/> -->
+                <li><img src="images/synth.png"/>
                 <li><img src="images/wavy-jones.gif"/>
                 <li><img src="images/waveforms.png"/>
                 <li><img src="images/jsconf-eu.png"/>
@@ -102,16 +108,60 @@
                 <li><img src="images/abbey-load.gif"/>
                 <li><img src="images/web-audio-intro.png"/>
                 <li><img src="images/qwerty-hancock.gif"/>
-                <li><img src="images/mrs-modular.png"/>
                 <li><img src="images/monster.png"/>
                 <li><img src="images/hn-pod.png"/>
                 <li><img src="images/gmail.png"/>
                 <li><img src="images/protothon.png"/>
                 <li><img src="images/twitter.png"/>
                 <li><img src="images/octocat.png"/>
+                <li><img src="images/conference-crusher.jpg"/>
             </ul>
             <ul id="background" class="bg"></ul>
             <ul id="foreground" class="fg tiles">
+                <li>
+                    <a href="https://raygum.com">
+                        <h2>Raygum</h2>
+                        <p>Create and share playlists to Spotify and Apple Music.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://sodaphonic.com">
+                        <h2>Sodaphonic</h2>
+                        <p>An online audio editor for humans.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/i-dont-know-what-to-do/">
+                        <h2>I don't know what to do</h2>
+                        <p>Help me somebody.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/surfs-up">
+                        <h2>Surf's Up</h2>
+                        <p>Mmmmmm, mmmmmm, aboard a tidal wave.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/thx-deep-note-in-javascript/">
+                        <h2>THX Deep Note</h2>
+                        <p>Recreating the classic sound in JavaScript.</p>
+                    </a>
+                </li>
+                <!--
+                <li>
+                    <a href="http://beatpetite.com">
+                        <h2>Beat Petite</h2>
+                        <p>A sample-free drum machine made with the Web Audio API.</p>
+                    </a>
+                </li>
+                -->
+                <li>
+                    <a href="/synth/">
+                        <h2>Synth</h2>
+                        <p>An analogue-style synth made using the Web Audio API.</p>
+                    </a>
+                </li>
                 <li>
                     <a href="/wavy-jones/">
                         <h2>Wavy Jones</h2>
@@ -131,7 +181,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.youtube.com/watch?v=PN8Eg1K9xjE">
+                    <a href="/electro-theremin/">
                         <h2>Electro-theremin</h2>
                         <p>As heard on &ldquo;Good Vibrations&rdquo; by The Beach Boys.</p>
                     </a>
@@ -142,49 +192,43 @@
                         <p>Short video tutorial on how make a sound using the Web Audio API.</p>
                     </a>
                 </li>
-                 <li> 
+                 <li>
                     <a href="/abbey-load/">
                         <h2>Abbey Load</h2>
                         <p>An audio asset manager for web audio projects.</p>
                     </a>
                 </li>
-                <li> 
-                    <a href="/qwerty-hancock/">
+                <li>
+                    <a href="/an-introduction-to-the-web-audio-api/">
                         <h2>Web Audio API</h2>
                         <p>A little tutorial on how to get up and running with the Web Audio API.</p>
                     </a>
                 </li>
-                 <li> 
+                 <li>
                     <a href="/qwerty-hancock/">
                         <h2>Qwerty Hancock</h2>
                         <p>Add a vector keyboard to your audio project.</p>
                     </a>
                 </li>
-                <li> 
-                    <a href="/mrs-modular/">
-                        <h2>Mrs. Modular</h2>
-                        <p>A synthesizer in your browser using the Web Audio API.</p>
-                    </a>
-                </li>
-                <li> 
-                    <a href="/greq/">
+                <li>
+                    <a href="https://gist.github.com/3766449">
                         <h2>Frequency of a Note</h2>
                         <p>Gist to convert a note to a frequency.</p>
                     </a>
                 </li>
-                <li> 
+                <li>
                     <a href="http://www.hnpod.com/episodes/why-programmers-work-at-night-i-don-t-want-to-be-part-of-your-ecosystem-twitter-api-limits">
                         <h2>HNpod</h2>
                         <p>I was recently a guest on the HNpod podcast. Have a listen here.</p>
                     </a>
                 </li>
-                <li> 
+                <li>
                     <a href="#">
                         <h2>Email me!</h2>
                         <p>stuartmemo at gmail com (does this actually fool bots anymore?)</p>
                     </a>
                 </li>
-                <li> 
+                <li>
                     <a href="http://protothon.com">
                         <h2>Protothon</h2>
                         <p>Rethinking Real-time on 30/11/12 with Chrome at Campus London.</p>
@@ -196,10 +240,16 @@
                         <p>I talk a lot of rubbish on Twitter as @stuartmemo</p>
                     </a>
                 </li>
-                <li> 
+                <li>
                     <a href="http://github.com/stuartmemo">
                         <h2>Github</h2>
                         <p>Fork, fix, and have fun with the things I made on Github.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/stuartmemo/conference-crusher">
+                        <h2>Conference Crusher</h2>
+                        <p>A web audio guitar amp for crushing conferences.</p>
                     </a>
                 </li>
             </ul>
@@ -213,16 +263,22 @@
                 var hue = getRandomInt(0, 360),
                     sat = saturation || getRandomInt(50, 100) + '%',
                     lit = lightness || getRandomInt(10, 100) + '%',
-                    alf = alpha || Math.random() * (0.8 - 0) + 0; 
+                    alf = alpha || Math.random() * (0.8 - 0) + 0;
 
                 return 'hsla(' + hue + ',' + sat + ',' + lit + ',' + alf + ')';
             };
 
+            var getNumberNodes = function () {
+
+                return (Math.floor(document.body.clientWidth / 25) * Math.floor(document.documentElement.clientHeight / 25));
+            };
+
             var bg = document.getElementById('background'),
                 childNodes = document.getElementById('movies').getElementsByTagName('li'),
-                noOfChildNodes = childNodes.length;
+                noOfChildNodes = childNodes.length,
+                totalNodes = getNumberNodes();
 
-            for (var i = 0; i < 2080; i++) {
+            for (var i = 0; i < totalNodes; i++) {
                 var elem = document.createElement('li');
                 elem.style.backgroundColor = randomColour();
                 bg.appendChild(elem);
@@ -231,9 +287,10 @@
             var changeTiles = function () {
                 var tiles = document.getElementById('background').getElementsByTagName('li'),
                     noOfTiles = tiles.length,
-                    random = getRandomInt(0, noOfTiles);
+                    random = getRandomInt(0, noOfTiles),
+                    i;
 
-                for (var i = 0; i < noOfTiles; i++) {
+                for (i = 0; i < noOfTiles; i++) {
                     if (i === random) {
                         tiles[i].style.backgroundColor = randomColour();
                     }
@@ -246,6 +303,17 @@
             document.styleSheets[0].insertRule('.fg li:hover a { color: ' + randomColour(1, '90%', '100%') + ';} ', 0);
 
             changeTiles();
+
+            // Analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-32368229-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
         </script>
     </body>
 </html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Speech Synthesis Demo</title>
+    </head>
+    <body>
+        <button id="start" disabled>Let me hear your browser talk</button> 
+        <script>
+            speechSynthesis.getVoices();
+
+            setTimeout(function () {
+                var voices = speechSynthesis.getVoices();
+                    agnesUtterance = new SpeechSynthesisUtterance();
+                    albertUtterance = new SpeechSynthesisUtterance(),
+                    startButton = document.querySelector('#start');
+
+                startButton.disabled = false;
+
+                startButton.addEventListener('click', function () {
+                    agnesUtterance.voice = voices[11];
+                    albertUtterance.voice = voices[12];
+
+                    agnesUtterance.rate = 0.8;
+                    agnesUtterance.pitch = 0.2;
+
+                    agnesUtterance.text = 'Hello Albert, I\'m Agnes';
+                    albertUtterance.text = 'Hi Agnes, nice to meet you!';
+
+                    agnesUtterance.onend = function () {
+                        speechSynthesis.speak(albertUtterance);
+                    }
+
+                    speechSynthesis.speak(agnesUtterance);
+                });
+            }, 1000);
+        </script>
+    </body>
+</html>

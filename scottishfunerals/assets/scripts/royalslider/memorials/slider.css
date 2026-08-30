@@ -1,0 +1,233 @@
+/*
+* Styles for specific slides
+*/
+
+.royalSlider {
+  margin:0 auto;
+  --border-bottom:1px solid #294B9C;
+
+  left:-10px;
+  --background:lightblue;
+  width:880px;							/* resp */
+  --width:100%;								/* resp */
+	padding:0px 0px 0px 0px; 
+}
+
+.rsNav {
+	--background:orange;
+}
+.rsOverflow {
+	--background:lightgreen;
+}
+.rsOverflow * {
+	box-sizing: border-box;				/* dev! */
+}
+.rsContainer {
+	--background:lightgreen;
+}
+.rsSlide {	
+	box-sizing: border-box;				/* dev */
+	--width:860px;
+	padding:0px 10px 0px 7px; /* controls gap between left of tab 'page' and content */
+	--background:deeppink;
+}
+.rsMinW .rsTabs {
+  margin-top:0px;
+}
+.rsMinW .rsSlide {
+  --background:gold;						/* dev */
+}
+
+.rsContent {
+	color: #333;
+	font-size: 24px;
+	--line-height: 32px;
+	float: left;
+	--background:pink;						/* dev */
+	--width:100%;
+}
+
+.bContainer {
+	position: relative;
+	padding:0;
+	margin:0;
+	height:100%;
+	padding:20px 0px 20px 0px;
+	--background:yellow;					/* dev */
+  --width:100%;
+  width:867px;								/* resp */
+}
+
+.bContainer:after { /* clearfix rules for bContainer */
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.bContainer p {
+	text-align:left;
+}
+
+@media screen and (max-width: 940px) {
+	.royalSlider {
+		left:0;
+		width:100%;
+	}
+	.rsMinW .rsTab,
+	.rsNavSelected {
+		margin:2px 2px 0px 0px;
+	}
+	.rsMinW .rsTab:first-child {
+		margin:2px 2px 0px 0px;
+	}
+	.rsOverflow {
+		width:100% !important;
+	}
+	.rsContainer {
+		width:100%;
+	}
+	.rsSlide {	
+		padding:0px 0px 0px 0px; /* controls gap between left of tab 'page' and content */
+		width:100%;
+	}
+	.rsContent {
+		width:100%;
+	}
+	.bContainer {
+		padding:20px 5px 0px 5px; 
+		width:100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.rsMinW .rsTab,
+	.rsMinW .rsTab:first-child,
+	.rsNavSelected {
+		margin:2px 2px 0px 0px;
+		
+		padding-bottom:11px !important;
+		
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		
+		position:relative !important;
+		top:4px !important;
+	}
+}
+.rsABlock {
+  position: relative;
+  display: block;
+  left: auto;
+  top: auto;
+}
+
+
+/* For vertically-centered wrapped text in tabs
+* see: http://blog.themeforest.net/tutorials/vertical-centering-with-css/
+* and: http://css-tricks.com/vertically-center-multi-lined-text/
+* and: http://www.andy-howard.com/verticalAndHorizontalAlignment/index.html
+*/
+.tmbLabelOuter {
+	display:table;
+	height:35px;
+	--border:1px solid red;
+}
+.tmbLabelInner {
+  display: table-cell;
+  vertical-align: middle;
+	font-size: 16px;
+	--background:pink;
+}
+
+/*
+@media screen and (max-width: 960px) {
+  .rsContent {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .blockHeadline {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .blockSubHeadline {
+    font-size: 26px;
+    line-height: 32px
+  }
+}
+@media screen and (max-width: 500px) {
+  .royalSlider,
+  .rsOverflow {
+    --height: 330px !important;			--resp
+  }
+  .rsContent {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .blockHeadline {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .blockSubHeadline {
+    font-size: 22px;
+    line-height: 32px
+  }
+}
+*/
+
+
+/*_______ MEMORIALS PAGES - start ___________________________________________*/
+.memorialGallery {
+	float:left;
+	margin: 0 auto;
+	--background:red;
+	overflow:auto;
+}
+.memorialGallery:after { /* clearfix rules for memorialGallery */
+	/*
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+	*/
+}
+
+.memorialGalleryItem {
+	box-sizing: border-box;				/* dev */
+	display:inline-block;
+	width:210px; /* 870 total avail width, 10px between blocks */
+	padding:5px 0px;
+	margin:0px 2px 20px 2px;
+	margin:0px 4px 20px 0px;			/* resp */
+	background:white;
+	text-align:center;
+	-moz-box-shadow: 4px 5px 4px -4px #666;
+	-webkit-box-shadow: 4px 5px 4px -4px #666;
+	box-shadow: 4px 5px 4px -4px #666;
+	
+}
+.memorialGalleryItem a img {
+	padding:5px 0px;
+}
+.colours .memorialGalleryItem {
+	padding:0px 0px 5px 0px;
+}
+.colours .memorialGalleryItem a img {
+	padding:0px;
+}
+.memorialGalleryItem .itemInfo {
+	text-align:left;
+	padding:3px 18px 3px 18px;
+}
+.memorialGalleryItem .itemInfo .itemTitle {
+	float:left;
+}
+.memorialGalleryItem .itemInfo .itemPrice {
+	float:right;
+}
+
+
+/*_______ MEMORIALS PAGES - end _________________________________________*/

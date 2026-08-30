@@ -1,0 +1,41 @@
+stuartmemo.com {
+	# Old blog post redirects
+	redir /an-introduction-to-the-web-audio-api/ https://blog.stuartmemo.com/an-introduction-to-the-web-audio-api 301
+	redir /constants-in-javascript/ https://blog.stuartmemo.com/constants-in-javascript 301
+	redir /declaring-variables-in-javascript/ https://blog.stuartmemo.com/declaring-variables-in-javascript 301
+	redir /file-formats-supported-by-the-audio-tag/ https://blog.stuartmemo.com/file-formats-supported-by-the-audio-tag 301
+	redir /function-declarations-vs-function-expressions/ https://blog.stuartmemo.com/function-declarations-vs-function-expressions 301
+	redir /get-the-frequency-of-a-musical-note/ https://blog.stuartmemo.com/get-the-frequency-of-a-musical-note 301
+	redir /introducing-qwerty-hancock/ https://blog.stuartmemo.com/introducing-qwerty-hancock 301
+	redir /introducing-wavy-jones/ https://blog.stuartmemo.com/introducing-wavy-jones 301
+	redir /javascript-is-the-new-punk-rock/ https://blog.stuartmemo.com/javascript-is-the-new-punk-rock 301
+	redir /making-sine-square-sawtooth-and-triangle-waves/ https://blog.stuartmemo.com/making-sine-square-sawtooth-and-triangle-waves 301
+	redir /making-waves-using-the-web-audio-api-video/ https://blog.stuartmemo.com/making-waves-using-the-web-audio-api-video 301
+	redir /thx-deep-note-in-javascript/ https://blog.stuartmemo.com/thx-deep-note-in-javascript 301
+	redir /what-is-sound/ https://blog.stuartmemo.com/what-is-sound 301
+
+	root * /srv/stuartmemo.com/current
+	encode zstd gzip
+	file_server
+
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000"
+	@css path *.css
+	header @css Cache-Control "no-cache"
+	@js path *.js
+	header @js Cache-Control "no-cache"
+	@jpg path *.jpg
+	header @jpg Cache-Control "public, max-age=2592000"
+	@jpeg path *.jpeg
+	header @jpeg Cache-Control "public, max-age=2592000"
+	@png path *.png
+	header @png Cache-Control "public, max-age=2592000"
+	@gif path *.gif
+	header @gif Cache-Control "public, max-age=2592000"
+	@ico path *.ico
+	header @ico Cache-Control "public, max-age=2592000"
+}
+
+www.stuartmemo.com {
+	redir https://stuartmemo.com{uri} 301
+}

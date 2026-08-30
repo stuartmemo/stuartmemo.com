@@ -1,0 +1,63 @@
+html {
+    background: #050505;
+    color: #f3e939;
+    font-family: Courier, sans-serif;
+    font-size: 18px;
+}
+
+h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1, a, a:visited, pre {
+    color: #fb2a3d;
+}
+
+h2 {
+    color: #076cf0;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+h3 {
+    color: #076cf0;
+}
+
+.container {
+    width: 600px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.the-abbey {
+    float: right;
+    width: 220px;
+}
+
+pre {
+    margin-left: 0;
+}
+
+#oscilloscope {
+    width: 600px;
+    height: 200px;
+}
+
+@-webkit-keyframes blink {
+    48% { background: transparent; }
+    50% { background: #F4ED3D; }
+    52% { background: transparent; }
+}
+
+.eye-eye {
+    height: 10px;
+    width: 10px;
+    right: 82px;
+    top: 97px;
+    position: absolute;
+    -webkit-animation: blink 12s steps(1, start) infinite;
+}
+
+.left-eye {
+    right: 125px;
+}

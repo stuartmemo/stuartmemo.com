@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Reverb test</title>
+	</head>
+	<body>
+		<input type="range"/>
+		<script>
+			var context = new webkitAudioContext(),
+				osc = context.createOscillator(),
+				convolver = context.createConvolver(),
+				gainNode = context.createGainNode(),
+				reverbBuffer;
+
+			var request = new XMLHttpRequest();
+			gainNode.gain.value = 0.5;
+
+			request.open('GET', 'irDrumRoom.wav', true);
+			request.responseType = 'arraybuffer';
+
+			request.onload = function() {
+				context.decodeAudioData(request.response, function(buffer) { 
+			    	reverbBuffer = buffer;
+			    	convolver.buffer = reverbBuffer;
+			    	osc.connect(gainNode);
+					osc.connect(convolver);
+					convolver.connect(gainNode);
+					gainNode.connect(context.destination);
+
+					osc.noteOn(0);
+				});
+			};
+
+			request.send();
+
+			var loadAudioFile = (function () {
+				var request = new XMLHttpRequest();
+
+			});
+		</script>
+	</body>
+</html>

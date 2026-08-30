@@ -1,0 +1,23 @@
+{
+  "name": "bitesize-brando",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass ./sass/main.scss ./styles/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gm": "^1.23.1",
+    "gulp": "^3.9.1",
+    "gulp-svg-sprite": "^1.4.0",
+    "imagemin": "^5.3.1",
+    "imagemin-pngquant": "^5.1.0",
+    "node-sass": "^4.9.2",
+    "rimraf": "^2.6.2",
+    "spritesmith": "^3.3.1",
+    "svg-sprite": "^1.4.0"
+  }
+}

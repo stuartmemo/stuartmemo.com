@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Whylophone?</title>
+        <meta name="author" content="Stuart Memo"/>
+        <link rel="icon" href="images/favicon.ico"/>
+        <link rel="stylesheet" href="styles/master.css"/>
+        <script src="//use.typekit.net/enw0xku.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <!--
+         _       ____                __                  __                   ___ 
+        | |     / / /_  __  __      / /___        ____  / /_  ____  ____  ___/__ \
+        | | /| / / __ \/ / / /_____/ / __ \______/ __ \/ __ \/ __ \/ __ \/ _ \/ _/
+        | |/ |/ / / / / /_/ /_____/ / /_/ /_____/ /_/ / / / / /_/ / / / /  __/_/  
+        |__/|__/_/ /_/\__, /     /_/\____/     / .___/_/ /_/\____/_/ /_/\___(_)   
+                     /____/                   /_/
+        -->
+    </head>    
+    <body>
+        <div id="container">
+            <h1 class="tk-orgovan-rounded-web">Why-lo-phone?</h1>
+            <ul id="footer">
+                <li id="drum-select">
+                    <ul>
+                        <li title="celesta">Celesta</li>
+                        <li title="marimba">Marimba</li>
+                        <li title="xylophone" id="selected">Xylophone</li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="credits">
+                <p><span>Why-lo-phone? A pointless xylophone for your browser.</span><a href="http://theresassoundworld.com">Made with Theresa's Sound World</a></p>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="scripts/raphael-min.js"></script>
+        <script src="scripts/gui.js"></script>
+        <script src="scripts/theresas-sound-world.js"></script>
+
+        <script>
+            $(function () {
+                var context = new webkitAudioContext();
+                    mySoundWorld = new SoundWorld(context),
+                    files = {};
+
+                var loadInstrument = function (instrumentName) {
+                    var path = 'samples/' + instrumentName + '/';
+
+                    mySoundWorld.load(
+                        {   
+                            c3: path + 'c3.ogg',
+                            d3: path + 'd3.ogg',
+                            e3: path + 'e3.ogg',
+                            f3: path + 'f3.ogg',
+                            g3: path + 'g3.ogg',
+                            a3: path + 'a3.ogg',
+                            b3: path + 'b3.ogg',
+                            c4: path + 'c4.ogg'
+                        }, function (loadedFiles) {
+                            files = loadedFiles;
+                        }
+                    );
+                };
+
+                loadInstrument('xylophone');
+
+                var keyHit = function (key) {
+                    switch (key) {
+                        case 1:
+                            mySoundWorld.play(files.c3);
+                            break;
+                        case 2:
+                            mySoundWorld.play(files.d3);
+                            break;
+                        case 3:
+                            mySoundWorld.play(files.e3);
+                            break;
+                        case 4:
+                            mySoundWorld.play(files.f3);
+                            break;
+                        case 5:
+                            mySoundWorld.play(files.g3);
+                            break;
+                        case 6:
+                            mySoundWorld.play(files.a3);
+                            break;
+                        case 7:
+                            mySoundWorld.play(files.b3);
+                            break;
+                        case 8:
+                            mySoundWorld.play(files.c4);
+                            break;
+                        default:
+                            break;
+                    }
+
+                    fadeOut(key);
+                }
+
+                keyCheck = function keyCheck(e) {
+                    switch(e.keyCode) {
+                        case 65:
+                            keyHit(1);
+                            break;
+                        case 83:
+                            keyHit(2);
+                            break;
+                        case 68:
+                            keyHit(3);
+                            break;
+                        case 70:
+                            keyHit(4);
+                            break;
+                        case 71:
+                            keyHit(5);
+                            break;
+                        case 72:
+                            keyHit(6);
+                            break;
+                        case 74:
+                            keyHit(7);
+                            break;
+                        case 75:
+                            keyHit(8);
+                            break;
+                        default:
+                            break;
+                    };
+                };
+
+                document.onkeydown = keyCheck;
+
+                $('#drum-select li').click(function(){
+                    $('#drum-select li').each(function(){
+                        $(this).attr('id','');
+                    });
+                    loadInstrument($(this).attr("title"));
+                    $(this).attr("id","selected");
+                });
+
+                note1overlay.node.onmousedown = function() {;
+                    keyHit(1);
+                };
+
+                note2overlay.node.onmousedown = function() {
+                    keyHit(2);
+                };
+
+                note3overlay.node.onmousedown = function() {
+                    keyHit(3);
+                };
+
+                note4overlay.node.onmousedown = function() {
+                    keyHit(4);
+                };
+
+                note5overlay.node.onmousedown = function() {
+                    keyHit(5);
+                };
+
+                note6overlay.node.onmousedown = function() {
+                    keyHit(6);
+                };
+
+                note7overlay.node.onmousedown = function() {
+                    keyHit(7);
+                };
+
+                note8overlay.node.onmousedown = function() {
+                    keyHit(8);
+                };
+            });
+        </script>
+    </body>
+</html>

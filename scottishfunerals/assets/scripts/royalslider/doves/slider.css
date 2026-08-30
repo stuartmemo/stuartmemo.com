@@ -1,0 +1,49 @@
+/*
+* Styles for specific slides (on a specific page)
+*/
+
+
+.royalSlider {
+  margin:0 auto;
+  --border-bottom:1px solid #294B9C;
+  --border-bottom:1px solid blue;
+  width:600px; /* GA - changed 30/1/13 */
+  --border:1px solid red;
+
+}
+#rs-slider { /* GA - overrides .royalSlider */
+  margin:0 auto;
+  margin-bottom:20px;
+  width:380px; /* GA - same as image width */
+  width:280px; /* GA - same as image width */
+  max-width:100%;/* added 29/9/15 */
+  overflow:hidden;
+}
+
+.royalSlider > .rsContent {
+	display:none;
+}
+
+.rsContent {
+  --color: red;
+  font-size: 24px;
+  line-height:0;
+  --float: left;
+}
+
+.bContainer {
+  position: relative;
+  padding:0;
+  margin:0;
+  height:100%;
+	float: left;
+	
+	/* added 29/9/15 from main rs.css */
+	max-width: 100%;
+}
+
+/* added 29/9/15 from main rs.css */
+img.rsImg {
+	max-width: 100%;
+}
+

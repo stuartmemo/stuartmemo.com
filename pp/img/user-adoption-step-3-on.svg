@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="232px" viewBox="0 0 210 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-18.2%" y="-14.8%" width="136.5%" height="131.6%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#55517B" offset="0%"></stop>
+            <stop stop-color="#518BA1" offset="49.3124203%"></stop>
+            <stop stop-color="#79CABD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hover-03---Working-with-you" transform="translate(-900.000000, -1176.000000)">
+            <g id="Maximising-User-Adoption" transform="translate(0.000000, 810.000000)">
+                <g id="Group-9" transform="translate(920.000000, 382.000000)">
+                    <g id="Communication-Hexagon">
+                        <g id="Icon/Hexagon/Large" filter="url(#filter-1)">
+                            <polygon id="Path" fill="#383838" points="85 0.735202668 0.639097744 49.2580457 0.639097744 146.307997 85 194.828707"></polygon>
+                            <polygon id="Path" fill="#464646" transform="translate(126.541353, 98.324948) scale(-1, 1) translate(-126.541353, -98.324948) " points="168.721805 1.27819549 84.3609023 49.8010385 84.3609023 146.850989 168.721805 195.3717"></polygon>
+                            <path d="M85,0 L0,48.8904403 L0,146.675618 L85,195.56391 L170,146.675618 L170,48.8904403 L85,0 Z M3.77777778,144.505574 L3.77777778,51.060484 L85,4.34223599 L166.222222,51.060484 L166.222222,144.505574 L85,191.2206 L3.77777778,144.505574 Z" id="Mask" fill="url(#linearGradient-2)"></path>
+                        </g>
+                        <g id="Communication-Icon" transform="translate(52.406015, 74.135338)" fill="url(#linearGradient-2)">
+                            <path d="M18.2555714,26.5871053 C16.2756466,26.5871053 14.6702331,24.9714662 14.6702331,23.0017669 C14.6702331,21.0103383 16.2756466,19.406203 18.2555714,19.406203 C20.2252707,19.406203 21.8179023,21.0103383 21.8179023,23.0017669 C21.8179023,24.9714662 20.2252707,26.5871053 18.2555714,26.5871053 M31.6868496,19.406203 L31.6868496,0.000639097744 L0.000383458647,0.000639097744 L0.000383458647,63.3863534 L20.9001579,46.0489098 C21.2644436,45.7165789 21.7846692,45.5504135 22.2946692,45.5504135 L31.6868496,45.5504135 L31.6868496,26.5871053 C29.6954211,26.5871053 28.1027895,24.9714662 28.1027895,23.0017669 C28.1027895,21.0103383 29.6954211,19.406203 31.6868496,19.406203" id="Fill-1"></path>
+                            <path d="M45.1190226,26.5871053 C43.1493233,26.5871053 41.5336842,24.9714662 41.5336842,23.0017669 C41.5336842,21.0103383 43.1493233,19.406203 45.1190226,19.406203 C47.1104511,19.406203 48.7145865,21.0103383 48.7145865,23.0017669 C48.7145865,24.9714662 47.1104511,26.5871053 45.1190226,26.5871053 Z M31.6877444,0.000639097744 L31.6877444,19.406203 C33.6574436,19.406203 35.2718045,21.0103383 35.2718045,23.0017669 C35.2718045,24.9714662 33.6574436,26.5871053 31.6877444,26.5871053 L31.6877444,45.5504135 L63.3742105,45.5504135 L63.3742105,0.000639097744 L31.6877444,0.000639097744 Z" id="Fill-4" style="mix-blend-mode: screen;"></path>
+                        </g>
+                    </g>
+                    <g id="Group-7" transform="translate(11.503759, 140.601504)">
+                        <circle id="Oval-Copy-3" fill="url(#linearGradient-2)" cx="29.3984962" cy="29.3984962" r="29.3984962"></circle>
+                        <text id="3" font-family="Roboto-Bold, Roboto" font-size="25" font-weight="bold" letter-spacing="0.7692307" fill="#464646">
+                            <tspan x="21.84225" y="38.537594">3</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

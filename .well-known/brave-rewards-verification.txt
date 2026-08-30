@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: stuartmemo.com
+Token: f75f5aed2c43f42fdd33a2cd9e8b91dd9de73ef425e2d9601e9772c7a99771db

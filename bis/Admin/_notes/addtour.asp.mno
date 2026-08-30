@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsTour" value="name:id;datatype:INTEGER,name:calendar;datatype:LONGCHAR,name:venue;datatype:LONGCHAR,name:city;datatype:LONGCHAR,name:country;datatype:LONGCHAR,name:comments;datatype:LONGCHAR" />
+</info>

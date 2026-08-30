@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>New brand test page</title>
+        <link rel="stylesheet" href="./output/css/sprite.css">
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <div class="orb">
+            <div class="container">
+                <img src="images/bbc-logo.svg" />
+            </div>
+        </div>
+        <header class="core">
+            <div class="sparks">
+                <div class="container">
+                    <div class="logo logo--animate"></div>
+                    <nav>
+                        <ul>
+                            <li>Home</li>
+                            <li>Learn & Revise</li>
+                            <li>Support</li>
+                            <li>Careers</li>
+                        </ul>
+                    </nav>
+
+                    <div class="context-panel">
+                        <h1>What is addition?</h1>
+                        <p>Blah blah blah</p>
+
+                        <ul>
+                            <li>
+                                <button type="button" id="core">Core</button>
+                            </li>
+                            <li>
+                                <button type="button" id="primary">Primary</button>
+                            </li>
+                            <li>
+                                <button type="button" id="secondary">Secondary</button>
+                            </li>
+                            <li>
+                                <button type="button" id="post-16">Post-16</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script>
+            var logo = document.querySelector('.logo'),
+                header = document.querySelector('header');
+
+            logo.addEventListener('animationend', function () {
+                logo.classList.remove('logo--animate')
+            });
+
+            logo.addEventListener('mouseover', function () {
+                logo.classList.add('logo--animate')
+            });
+
+
+            var buttons = Array.from(document.querySelectorAll('button'));
+
+            buttons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    header.className = '';
+                    header.classList.add(this.id);
+                });
+
+            });
+        </script>
+    </body>
+</html>

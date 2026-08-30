@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsColumns" value="name:id;datatype:INTEGER,name:calendar;datatype:DATETIME,name:title;datatype:LONGCHAR,name:body;datatype:LONGCHAR,name:author;datatype:LONGCHAR" />
+</info>

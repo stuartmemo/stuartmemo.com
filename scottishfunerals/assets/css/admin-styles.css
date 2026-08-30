@@ -1,0 +1,196 @@
+/*_____ ADMIN PAGES ____________________________________*/
+body #headerContainer {
+  color:#fff !important;
+}
+
+h1 {
+  font-family:sans-serif;
+}
+.push {
+  height: 1px;
+}
+
+#subMenu ul li a {
+  font-family:sans-serif;
+  font-size:16px;
+  font-weight:bold;
+}
+
+#contentContainerBgAdmin {
+	width:100%;
+	margin:0 auto;
+}
+
+#contentContainerBgAdmin #contentAdmin {
+  background:url("../images/background/transp/transp-white-90.png") top left repeat;
+
+	padding:15px;
+  margin:20px;
+
+  --position:relative;
+
+	border:0px solid #e9e9e9;
+}
+
+#logInOut {
+  --display:inline-block;
+  --bottom: 10px;
+  --clear: both;
+  --float: right;
+  position: absolute;
+  left:20px;
+  bottom:80px;
+}
+#logInOut * {
+  font-size:15px;
+}
+
+/* ___ LOGIN PAGE start ____ */
+.loginForm label {
+  
+}
+.loginForm .formRow {
+    margin-bottom: 10px;
+}
+.loginForm label {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    margin: 5px 20px 0 0;
+    text-align: right;
+    width: 120px;
+}
+
+/* ___ LOGIN PAGE end ____ */
+
+
+
+#testimonialForm,
+#videoForm  {
+  float:left;
+}
+#testimonialForm label,
+#videoForm label {
+  display:inline-block;
+  width:160px;
+  vertical-align:top;
+  text-align:right;
+  padding-right:10px;
+  font-weight:bold;
+}
+label .labelNote {
+  font-weight:normal;
+}
+#videoForm .belowInputNote {
+  padding-left:170px;
+}
+
+#testimonialForm .formRow,
+#videoForm .formRow {
+  display:block;
+  margin-bottom:10px;
+}
+#testimonialForm .textAreaWrapper,
+#videoForm .textAreaWrapper {
+  display:inline-block;
+  width:410px;
+  --margin-bottom:10px;
+}
+#testimonialForm textarea#text,
+#videoForm textarea#description,
+textarea.mceTextarea {
+  width:400px;
+  height:150px;
+}
+#testimonialForm input#name,
+#videoForm input#url_code {
+  width:390px;
+  padding:10px;
+}
+#testimonialForm .form-buttons,
+#videoForm .form-buttons {
+  --margin-top:10px;
+  --text-align:right;
+  margin-left:170px;
+}
+
+table#admin-testimonials th,
+table#admin-crematoria th {
+  border-bottom:1px solid #666;
+}
+
+table#admin-crematoria th {
+	padding:2px 16px;
+}
+table#admin-crematoria td.priceCol {
+	text-align:center;
+}
+
+table#admin-testimonials td *
+table#admin-crematoria td * {
+  font-size:15px;
+}  
+table#admin-testimonials td,
+table#admin-videos td,
+table#admin-crematoria td {
+  font-size:14px;
+  max-width:400px;
+  padding:5px;
+  border-bottom:1px solid #ccc;
+  vertical-align:top;
+}
+table#admin-videos button {
+  margin-bottom:3px;
+}
+
+table#admin-videos td.selectedVideo {
+  background-color:#ccffcc;
+}
+
+table#admin-testimonials th,
+table#admin-testimonials tr:last-child td,
+table#admin-crematoria th,
+table#admin-crematoria tr:last-child td {
+  border-bottom:1px solid #666;
+}
+table#admin-testimonials p.testimonialName {
+  color:#333;
+}
+.buttonGroup button {
+	margin-left:10px;
+}
+
+.buttonGroupTop {
+  margin-bottom:20px;
+}
+.buttonBottomGroup {
+  margin-top:10px;
+}
+
+input.currency {
+		text-align:right;
+}
+input.price {
+		width:80px;
+}
+
+table#admin-crematoria {
+		--margin-bottom:10px;
+}
+
+th .small {
+	font-size:80%;
+	font-weight:normal;
+	color:#666; 
+}
+
+#formNotes {
+	margin-top:20px;
+	width:100%;
+	max-width:500px;
+}
+#validationOutput {
+	margin-top:10px;
+	line-height:1;
+	display:none;
+}

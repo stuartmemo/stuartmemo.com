@@ -1,0 +1,52 @@
+/*
+* Styles for specific slides (on a specific page)
+*/
+
+
+.royalSlider {
+  width:870px;
+  height:597px;
+	--position:absolute;
+}
+@media screen and (max-width: 940px) {
+	/* ensure no images are wider than window */
+	.royalSlider {
+	  max-width:100%;
+	  height:500px;
+	}
+}
+@media screen and (max-width: 600px) {
+	/* ensure no images are wider than window */
+	.royalSlider {
+	  max-width:100%;
+	  height:400px;
+	}
+}
+@media screen and (max-width: 500px) {
+	/* ensure no images are wider than window */
+	.royalSlider {
+	  max-width:100%;
+	  height:300px;
+	}
+}
+
+.rsDefault, .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrameHolder, .rsDefault .rsThumbs {
+    background: transparent;
+		background-image:url(img/sunlit-woods.jpg);
+}
+.royalSlider .royalCaption {
+    z-index: 100 !important;
+}
+
+
+.rsABlock {
+  position:relative;
+	top:16px;
+	left:16px;
+}
+.rsABlock p {
+  font-style:italic;
+	font-size:19px;
+	--line-height:1.5;
+	padding-bottom:3px;
+}

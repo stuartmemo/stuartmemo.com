@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>www.bisnation.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/extras/bis.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<TABLE WIDTH=751 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+  <TR> 
+    <TD> <IMG SRC="images/mock_01.gif" WIDTH=250 HEIGHT=7></TD>
+    <TD> <IMG SRC="images/mock_02.gif" WIDTH=250 HEIGHT=7></TD>
+    <TD> <IMG SRC="images/mock_03.gif" WIDTH=251 HEIGHT=7></TD>
+  </TR>
+  <TR> 
+    <TD> <IMG SRC="images/mock_04.gif" WIDTH=250 HEIGHT=65></TD>
+    <TD colspan="2"> 
+      <!--#include virtual="/extras/topica.asp" -->
+    </TD>
+  </TR>
+</TABLE>
+<table width="751" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="250"><img src="/images/blank.gif" width="250" height="1"></td>
+    <td><img src="images/blank.gif" width="250" height="1"></td>
+    <td><img src="images/blank.gif" width="251" height="1"></td>
+  </tr>
+  <tr> 
+    <td width="250" valign="top"> 
+      <!--#include virtual="/extras/random.asp" -->
+    </td>
+    <td bgcolor="#EA2B2C" valign="top"> 
+      <!--#include virtual="/extras/leftnav.asp" -->
+    </td>
+    <td bgcolor="#000000" valign="top"> 
+      <!--#include virtual="/extras/multi.asp" -->
+    </td>
+  </tr>
+</table>
+<br>
+<table cellspacing=0 cellpadding=0 width=750 border=0>
+  <tbody> 
+  <tr> 
+    <td valign=top align=middle width=250>&nbsp; </td>
+    <td valign=top width=500> 
+      <table class=text cellspacing=4 cellpadding=0 width=500 border=0>
+        <tr> 
+          <td valign=top width=500 class="title">Photography 
+            <p>
+          </td>
+        </tr>
+        <tbody> </tbody> 
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+<table cellspacing=0 cellpadding=0 width=750 border=0>
+  <tbody> 
+  <tr> 
+    <td valign=top width=250><img src="images/blank.gif" width="250" height="1"> 
+    </td>
+    <td valign=top width=250> 
+      <table width="100%" border="0" cellspacing="3" cellpadding="0">
+        <tr> 
+          <td><span class="headline">Set One Press Shots 2001</span></td>
+        </tr>
+      </table>
+      <table cellspacing=3 cellpadding=0 border=0>
+        <tbody> 
+        <tr> 
+          <td><a href="javascript:;" onClick="MM_openBrWindow('photsados/set1/1.htm','','width=340,height=512')"><img src="ph123otos/set1/1.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/2.htm','','width=390,height=584')"><img src="images/photos/set1/2.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/3.htm','','width=340,height=529')"><img src="images/photos/set1/3.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/4.htm','','width=340,height=296')"><img src="images/photos/set1/4.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/5.htm','','width=340,height=496')"><img src="images/photos/set1/5.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/6.htm','','width=340,height=512')"><img src="images/photos/set1/6.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/7.htm','','width=340,height=513')"><img src="images/photos/set1/7.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/8.htm','','width=340,height=513')"><img src="images/photos/set1/8.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/9.htm','','width=340,height=513')"><img src="images/photos/set1/9.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('images/photos/set1/10.htm','','width=340,height=513')"><img src="images/photos/set1/10.gif" width="20" height="20" border="0"></a></td>
+        </tr>
+        <tr> 
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set1/11.htm','','width=493,height=360')"><img src="/images/photos/set1/11.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set1/12.htm','','width=340,height=513')"><img src="/images/photos/set1/12.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set1/13.htm','','width=340,height=513')"><img src="/images/photos/set1/13.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set1/14.htm','','width=493,height=360')"><img src="/images/photos/set1/14.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set1/15.htm','','width=488,height=360')"><img src="/images/photos/set1/15.gif" width="20" height="20" border="0"></a></td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+    <td valign=top width=250> 
+      <table width="100%" border="0" cellspacing="3" cellpadding="0">
+        <tr> 
+          <td><span class="headline">Set Two Wedding 2001</span></td>
+        </tr>
+      </table>
+      <table cellspacing=3 cellpadding=0 border=0>
+        <tbody> 
+        <tr> 
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set2/1.htm','','width=340,height=480')"><img src="/images/photos/set2/1.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set2/2.htm','','width=340,height=480')"><img src="/images/photos/set2/2.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set2/3.htm','','width=340,height=480')"><img src="/images/photos/set2/3.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set2/4.htm','','width=340,height=480')"><img src="/images/photos/set2/4.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set2/5.htm','','width=340,height=480')"><img src="/images/photos/set2/5.gif" width="20" height="20" border="0"></a></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td valign=top width=250>
+      <table width="100%" border="0" cellspacing="3" cellpadding="0">
+        <tr> 
+          <td><span class="headline">Set Three Amanda</span></td>
+        </tr>
+      </table>
+      <table cellspacing=3 cellpadding=0 border=0>
+        <tbody> 
+        <tr> 
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set3/1.htm','','width=340,height=480')"><img src="/images/photos/set3/1.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set3/2.htm','','width=340,height=480')"><img src="/images/photos/set3/2.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set3/3.htm','','width=340,height=480')"><img src="/images/photos/set3/3.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set3/4.htm','','width=340,height=480')"><img src="/images/photos/set3/4.gif" width="20" height="20" border="0"></a></td>
+          <td><a href="javascript:;" onClick="MM_openBrWindow('/images/photos/set3/5.htm','','width=340,height=480')"><img src="/images/photos/set3/5.gif" width="20" height="20" border="0"></a></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+    <td valign=top width=250>&nbsp;</td>
+    <td valign=top width=250>&nbsp;</td>
+  </tr>
+  </tbody> 
+</table>
+</body>
+</html>

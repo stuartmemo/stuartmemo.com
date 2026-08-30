@@ -1,0 +1,193 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+
+Content by Stuart Memo
+-->
+<!doctype html>
+<html>
+    <head>
+        <title>The Amazing Sounds of JavaScript</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="icon" type="image/png" href="/images/favicon.png"/>
+        <link rel="stylesheet" media="all" href="theme/css/default.css">
+        <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+        <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+        <script src="//use.typekit.net/iij2wcl.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script src="scripts/raphael.js"></script>
+        <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+    </head>
+    <body style="opacity: 0">
+        <slides class="layout-widescreen">
+
+            <!-- Slide 1 - Title -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter" style="">
+                    <h1>Things you can do in a browser that most people don’t know about<span style="font-size: 0.8em"></span><br/><span class="smaller"></span></h1>
+                </article>
+            </slide>
+
+            <!-- Slide 2 - You aren't most people -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter" style="">
+                    <h1>Most of you aren't most people</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 3 - -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter" style="">
+                    <h1>Browns79<br/>
+                        <span>Stuart Brown</span><br/>
+                        <span>@stuartmemo</span><br/>
+                        <span>BBC iWonder &amp; Bitesize</span>
+                    </h1>
+                </article>
+            </slide>
+
+            <!-- Slide 6 - Greatest invention -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter">
+                    <h1>What is the greatest invention of the last 100 years?</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 7 - The Web Audio API -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter">
+                    <h1>Web Audio API</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 8 - Basic Node Graph -->
+            <slide class="logoslide">
+                <article class="flexbox vcenter">
+                    <img src="images/node-graph-simple.jpg" style="width: 700px; height: 400px;"/>
+                </article>
+            </slide>
+
+            <!-- Slide 9 - Making Wavs -->
+            <slide class="logoslide">
+                <article class="flexbox vcenter">
+                    <h1>Making Waves</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 10 - The Beach Boys -->
+            <slide class="logoslide fill" style="background-image: url(images/beach-boys.jpg)">
+                <article class="flexbox vcenter"></article>
+            </slide>
+
+            <!-- Slide 11 - Electro-Theremin -->
+            <slide>
+                <article>
+                    <iframe data-src="http://stuartmemo.com/theremin/"></iframe>
+                </article>
+            </slide>
+
+            <!-- Slide 12 - Good Vibrations -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter">
+                    <h1>Good Vibrations<br/>
+                    <span class="even-smaller">navigator.vibrate(<br/>&nbsp;&nbsp;&nbsp;&nbsp;[200, 100, 200]<br/>);</span></h1>
+                </article>
+            </slide>
+
+            <!-- Slide 13 - Get User Media -->
+            <slide class="logoslide">
+                <article class="flexbox vcenter">
+                    <h1>get<span class="sex-pistols-pink">UserMedia</span>();</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 14 - Adele -->
+            <slide class="logoslide">
+                <article class="flexbox vcenter">
+                    <h1>Hello?</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 15 - More human than human -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter" style="">
+                    <h1>More human than human</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 17 - Blade Runner -->
+
+            <!-- Slide 18 - Daisy Daisy -->
+            <slide class="logoslide nobackground">
+                <article class="flexbox vcenter" style="">
+                    <h1>Daisy, Daisy</h1>
+                </article>
+                <script>
+                /**
+                    var utterance  = new SpeechSynthesisUtterance();
+                    utterance.text = 'Hello, I am the Chrome Web browser. It sure is great to get out of that bag.';
+                    speechSynthesis.speak(utterance);
+                */
+                </script>
+            </slide>
+
+            <!-- Slide 19 - Web MIDI API -->
+            <slide>
+                <article class="flexbox vcenter">
+                    <h1>Web MIDI API</h1>
+                </article>
+            </slide>
+
+            <!-- Slide 20 - Web MIDI API -->
+            <!-- SWITCH TO CHROMIUM -->
+            <!-- MIDI SYNTH -->
+
+            <!-- Slide 22 - Thank You -->
+            <slide class="logoslide">
+                <article class="flexbox vcenter">
+                    <h1>
+                        Thanks!<br/>
+                        <span class="even-smaller">@stuartmemo</span><br/>
+                        <span class="even-smaller">github.com/stuartmemo</span>
+                    </h1>
+                </article>
+            </slide>
+
+            <slide class="backdrop"></slide>
+        </slides>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+        <script src="scripts/abbeyload.js"></script>
+
+        <script>
+            $(function () {
+                var context = new webkitAudioContext();
+
+                var playAudioFile = function (buffer) {
+                    var source = context.createBufferSource();
+
+                    source.buffer = buffer;
+                    source.connect(context.destination);
+                    source.noteOn(0); // Play sound immediately
+                };
+
+                var assets = new AbbeyLoad( [{
+                    'skype': 'audio/skype.mp3'
+                }], function (buffers) {
+                    window.onkeypress = function (key) {
+                        console.log(key);
+                        if (key.charCode === 80) {
+                            playAudioFile(buffers.skype)
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

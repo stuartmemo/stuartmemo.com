@@ -1,0 +1,168 @@
+@import url(style.css);
+@import url(customize-presets.css);
+@import url(p1.css);
+html {
+  height: 100%; }
+
+body {
+  background: #E6E8E9;
+  background-image: linear-gradient(45deg, #E6E8E9, #F3F5FF);
+  font-size: 62.5%;
+  font-family: Arial, sans-serif; }
+
+h1 {
+  font-family: "futura-pt";
+  font-size: 5rem;
+  margin: 0;
+  text-align: center; }
+
+h2 {
+  font-size: 1.2rem; }
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-top: 10px; }
+
+a {
+  color: #E40487;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+button {
+  background-color: #C32D7F;
+  border: 0;
+  border-bottom: 4px solid #8C3665;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.8rem 2.1rem; }
+  button:hover {
+    cursor: pointer; }
+
+.container {
+  margin: auto;
+  max-width: 600px; }
+
+.button-container {
+  margin: 2.5rem 0;
+  text-align: center; }
+
+.mellotron {
+  margin: auto;
+  position: relative;
+  width: 489px; }
+
+#keyboard {
+  width: 500px;
+  height: 120px; }
+
+.chassis {
+  background-color: #F5F3FB;
+  border: 1px solid black;
+  border-bottom: 0;
+  height: 130px;
+  width: 489px; }
+  .chassis > div:first-child {
+    width: auto !important;
+    height: auto !important;
+    float: left;
+    margin: 12px;
+    transform: scale(0.8); }
+    .chassis > div:first-child:focus {
+      outline: 0; }
+    .chassis > div:first-child .scale {
+      display: none; }
+  .chassis label {
+    font-family: "futura-pt";
+    font-size: 16px;
+    font-weight: normal;
+    left: 39px;
+    position: absolute;
+    top: 94px; }
+  .chassis .voice-label {
+    left: 116px; }
+  .chassis .wave-label {
+    left: 271px; }
+
+.instructions {
+  font-size: 12px;
+  margin: 14px 0;
+  text-align: center; }
+
+.dolby-logo {
+  float: right;
+  margin: 42px 28px 0;
+  width: 48px; }
+
+.tgl {
+  display: none; }
+  .tgl, .tgl:after, .tgl:before,
+  .tgl *, .tgl *:after, .tgl *:before,
+  .tgl + .tgl-btn {
+    box-sizing: border-box; }
+    .tgl::selection, .tgl:after::selection, .tgl:before::selection,
+    .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection,
+    .tgl + .tgl-btn::selection {
+      background: none; }
+  .tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none; }
+    .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+      position: relative;
+      display: block;
+      content: "";
+      width: 50%;
+      height: 100%; }
+    .tgl + .tgl-btn:after {
+      left: 0; }
+    .tgl + .tgl-btn:before {
+      display: none; }
+  .tgl:checked + .tgl-btn:after {
+    left: 50%; }
+
+.tgl-light + .tgl-btn {
+  background: black;
+  border-radius: 2em;
+  left: 120px;
+  padding: 2px;
+  position: absolute;
+  top: 50px;
+  transition: all .4s ease; }
+  .tgl-light + .tgl-btn:after {
+    border-radius: 50%;
+    background: #F5F3FB;
+    transition: all .2s ease; }
+
+.tgl-light:checked + .tgl-btn {
+  background: black; }
+
+.waves {
+  height: 42px;
+  float: left;
+  margin-top: 42px;
+  margin-left: 100px;
+  overflow: hidden;
+  position: relative; }
+  .waves .loading {
+    background: #FF97CB;
+    border: 1px solid black;
+    font-size: 14px;
+    height: 40px;
+    line-height: 42px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 150px; }
+
+#waves {
+  border: 1px solid grey;
+  height: 40px;
+  width: 150px;
+  z-index: -1; }

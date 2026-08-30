@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            html, body {
+                margin: 0;
+                height: 100%;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="color-thief.js"></script>
+        <img src="road.jpg" />
+        <script>
+            var img = 'road.jpg';
+
+            RGBaster.colors(img, {
+                success: function(payload) {
+                    document.querySelector('body').style.backgroundColor = payload.dominant;
+                }
+            });
+        </script>
+    </body>
+</html>
