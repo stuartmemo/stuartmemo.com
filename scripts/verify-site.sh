@@ -39,6 +39,13 @@ if ! grep -q 'href="/mcp-mpc/"' "$site_dir/index.html"; then
     exit 1
 fi
 
+first_tile="$(awk '/<ul id="movies"/{tiles=1; next} tiles && /<li><img/{print; exit}' "$site_dir/index.html")"
+first_link="$(awk '/<ul id="foreground"/{tiles=1; next} tiles && /<a href=/{print; exit}' "$site_dir/index.html")"
+if [[ "$first_tile" != *'images/mcp-mpc.png'* || "$first_link" != *'href="/mcp-mpc/"'* ]]; then
+    echo "MCP MPC is not the first portfolio item." >&2
+    exit 1
+fi
+
 for forbidden_path in \
     .git .github components ops scripts README.md COMPONENTS.md DEPLOYMENT.md \
     synth/current synth/releases synth/repo synth/revisions.log synth/shared
