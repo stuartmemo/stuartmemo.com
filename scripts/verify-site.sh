@@ -11,7 +11,11 @@ required_files=(
     "images/mcp-mpc.png"
     "index.html"
     "mcp-mpc/index.html"
+    "mcp-mpc/samples/manifest.json"
+    "mcp-mpc/samples/dusty-crate/kick.wav"
+    "mcp-mpc/samples/disco-room/kick.wav"
     "mcp-mpc/samples/kick.wav"
+    "mcp-mpc/samples/pixel-circuit/kick.wav"
     "qwerty-hancock/index.html"
     "qwerty-hancock/qwerty-hancock.js"
     "qwerty-hancock/qwerty-hancock.png"
@@ -30,9 +34,17 @@ done
 
 mcp_sample_count="$(find "$site_dir/mcp-mpc/samples" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
 if [[ "$mcp_sample_count" != "16" ]]; then
-    echo "Expected 16 MCP MPC samples, found $mcp_sample_count." >&2
+    echo "Expected 16 legacy MCP MPC samples, found $mcp_sample_count." >&2
     exit 1
 fi
+
+for mcp_kit in dusty-crate disco-room pixel-circuit; do
+    mcp_kit_sample_count="$(find "$site_dir/mcp-mpc/samples/$mcp_kit" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
+    if [[ "$mcp_kit_sample_count" != "16" ]]; then
+        echo "Expected 16 samples in MCP MPC kit $mcp_kit, found $mcp_kit_sample_count." >&2
+        exit 1
+    fi
+done
 
 mcp_bundle_src="$(sed -n 's/.*src="\(\/mcp-mpc\/assets\/index-[^"]*\.js\)".*/\1/p' "$site_dir/mcp-mpc/index.html" | head -n 1)"
 mcp_bundle="$site_dir$mcp_bundle_src"
@@ -43,7 +55,8 @@ fi
 
 for webmcp_tool in \
     mcpmpc_get_state mcpmpc_load_sample mcpmpc_assign_pad mcpmpc_configure_pad \
-    mcpmpc_chop_sample mcpmpc_create_sequence mcpmpc_play_pad mcpmpc_set_transport
+    mcpmpc_chop_sample mcpmpc_create_sequence mcpmpc_play_pad mcpmpc_select_kit \
+    mcpmpc_set_transport
 do
     if ! grep -q "$webmcp_tool" "$mcp_bundle"; then
         echo "MCP MPC bundle is missing WebMCP tool: $webmcp_tool" >&2

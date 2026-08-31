@@ -1,0 +1,71 @@
+{
+  "generatedBy": "scripts/generate-samples.mjs",
+  "sampleRate": 22050,
+  "format": "16-bit mono PCM WAV",
+  "rights": "Original deterministic procedural synthesis. No third-party samples.",
+  "kits": [
+    {
+      "id": "dusty-crate",
+      "files": [
+        "kick.wav",
+        "snare.wav",
+        "clap.wav",
+        "closed-hat.wav",
+        "open-hat.wav",
+        "low-tom.wav",
+        "conga.wav",
+        "tambourine.wav",
+        "rim.wav",
+        "cowbell.wav",
+        "shaker.wav",
+        "wood-perc.wav",
+        "crash.wav",
+        "ride.wav",
+        "bass-stab.wav",
+        "vinyl-hit.wav"
+      ]
+    },
+    {
+      "id": "disco-room",
+      "files": [
+        "kick.wav",
+        "snare.wav",
+        "clap.wav",
+        "closed-hat.wav",
+        "open-hat.wav",
+        "low-tom.wav",
+        "conga.wav",
+        "tambourine.wav",
+        "rim.wav",
+        "cowbell.wav",
+        "shaker.wav",
+        "wood-perc.wav",
+        "crash.wav",
+        "ride.wav",
+        "bass-stab.wav",
+        "vinyl-hit.wav"
+      ]
+    },
+    {
+      "id": "pixel-circuit",
+      "files": [
+        "kick.wav",
+        "snare.wav",
+        "clap.wav",
+        "closed-hat.wav",
+        "open-hat.wav",
+        "low-tom.wav",
+        "mid-tom.wav",
+        "high-tom.wav",
+        "rim.wav",
+        "cowbell.wav",
+        "shaker.wav",
+        "perc.wav",
+        "crash.wav",
+        "ride.wav",
+        "bass-stab.wav",
+        "vinyl-hit.wav"
+      ]
+    }
+  ]
+}
