@@ -15,6 +15,9 @@ required_files=(
     "mcp-mpc/samples/dusty-crate/kick.wav"
     "mcp-mpc/samples/disco-room/kick.wav"
     "mcp-mpc/samples/kick.wav"
+    "mcp-mpc/samples/lofi-acoustic/kick.wav"
+    "mcp-mpc/samples/lofi-acoustic/LICENSE-CC0.txt"
+    "mcp-mpc/samples/lofi-acoustic/PROVENANCE.md"
     "mcp-mpc/samples/pixel-circuit/kick.wav"
     "qwerty-hancock/index.html"
     "qwerty-hancock/qwerty-hancock.js"
@@ -38,13 +41,19 @@ if [[ "$mcp_sample_count" != "16" ]]; then
     exit 1
 fi
 
-for mcp_kit in dusty-crate disco-room pixel-circuit; do
+for mcp_kit in dusty-crate lofi-acoustic disco-room pixel-circuit; do
     mcp_kit_sample_count="$(find "$site_dir/mcp-mpc/samples/$mcp_kit" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
     if [[ "$mcp_kit_sample_count" != "16" ]]; then
         echo "Expected 16 samples in MCP MPC kit $mcp_kit, found $mcp_kit_sample_count." >&2
         exit 1
     fi
 done
+
+if ! grep -q '"id": "lofi-acoustic"' "$site_dir/mcp-mpc/samples/manifest.json" || \
+   ! grep -q '"rights": "CC0 1.0 Universal"' "$site_dir/mcp-mpc/samples/manifest.json"; then
+    echo "MCP MPC manifest is missing Lo-Fi Acoustic CC0 provenance." >&2
+    exit 1
+fi
 
 mcp_bundle_src="$(sed -n 's/.*src="\(\/mcp-mpc\/assets\/index-[^"]*\.js\)".*/\1/p' "$site_dir/mcp-mpc/index.html" | head -n 1)"
 mcp_bundle="$site_dir$mcp_bundle_src"
