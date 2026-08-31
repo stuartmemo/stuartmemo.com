@@ -11,14 +11,18 @@ required_files=(
     "images/mcp-mpc.png"
     "index.html"
     "mcp-mpc/index.html"
+    "mcp-mpc/og.png"
     "mcp-mpc/samples/manifest.json"
     "mcp-mpc/samples/dusty-crate/kick.wav"
-    "mcp-mpc/samples/disco-room/kick.wav"
-    "mcp-mpc/samples/kick.wav"
+    "mcp-mpc/samples/hip-hop/kick.wav"
+    "mcp-mpc/samples/hip-hop/LICENSE-CC0.txt"
+    "mcp-mpc/samples/hip-hop/PROVENANCE.md"
     "mcp-mpc/samples/lofi-acoustic/kick.wav"
     "mcp-mpc/samples/lofi-acoustic/LICENSE-CC0.txt"
     "mcp-mpc/samples/lofi-acoustic/PROVENANCE.md"
-    "mcp-mpc/samples/pixel-circuit/kick.wav"
+    "mcp-mpc/samples/traditional/kick.wav"
+    "mcp-mpc/samples/traditional/LICENSE-CC0.txt"
+    "mcp-mpc/samples/traditional/PROVENANCE.md"
     "qwerty-hancock/index.html"
     "qwerty-hancock/qwerty-hancock.js"
     "qwerty-hancock/qwerty-hancock.png"
@@ -35,23 +39,27 @@ for required_file in "${required_files[@]}"; do
     fi
 done
 
-mcp_sample_count="$(find "$site_dir/mcp-mpc/samples" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
-if [[ "$mcp_sample_count" != "16" ]]; then
-    echo "Expected 16 legacy MCP MPC samples, found $mcp_sample_count." >&2
+mcp_sample_count="$(find "$site_dir/mcp-mpc/samples" -type f -name '*.wav' | wc -l | tr -d ' ')"
+if [[ "$mcp_sample_count" != "64" ]]; then
+    echo "Expected 64 MCP MPC samples across four kits, found $mcp_sample_count." >&2
     exit 1
 fi
 
-for mcp_kit in dusty-crate lofi-acoustic disco-room pixel-circuit; do
+for mcp_kit in dusty-crate hip-hop lofi-acoustic traditional; do
     mcp_kit_sample_count="$(find "$site_dir/mcp-mpc/samples/$mcp_kit" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
     if [[ "$mcp_kit_sample_count" != "16" ]]; then
         echo "Expected 16 samples in MCP MPC kit $mcp_kit, found $mcp_kit_sample_count." >&2
         exit 1
     fi
+    if ! grep -q "\"id\": \"$mcp_kit\"" "$site_dir/mcp-mpc/samples/manifest.json"; then
+        echo "MCP MPC manifest is missing kit $mcp_kit." >&2
+        exit 1
+    fi
 done
 
-if ! grep -q '"id": "lofi-acoustic"' "$site_dir/mcp-mpc/samples/manifest.json" || \
-   ! grep -q '"rights": "CC0 1.0 Universal"' "$site_dir/mcp-mpc/samples/manifest.json"; then
-    echo "MCP MPC manifest is missing Lo-Fi Acoustic CC0 provenance." >&2
+mcp_cc0_kit_count="$(grep -c '"rights": "CC0 1.0 Universal"' "$site_dir/mcp-mpc/samples/manifest.json")"
+if [[ "$mcp_cc0_kit_count" != "3" ]]; then
+    echo "Expected CC0 provenance for three recorded MCP MPC kits, found $mcp_cc0_kit_count." >&2
     exit 1
 fi
 
@@ -63,9 +71,9 @@ if [[ -z "$mcp_bundle_src" || ! -f "$mcp_bundle" ]]; then
 fi
 
 for webmcp_tool in \
-    mcpmpc_get_state mcpmpc_load_sample mcpmpc_assign_pad mcpmpc_configure_pad \
-    mcpmpc_chop_sample mcpmpc_create_sequence mcpmpc_play_pad mcpmpc_select_kit \
-    mcpmpc_set_transport
+    mcpmpc_get_state mcpmpc_select_kit mcpmpc_load_sample mcpmpc_assign_pad \
+    mcpmpc_configure_pad mcpmpc_chop_sample mcpmpc_create_sequence \
+    mcpmpc_play_pad mcpmpc_set_volume mcpmpc_set_transport
 do
     if ! grep -q "$webmcp_tool" "$mcp_bundle"; then
         echo "MCP MPC bundle is missing WebMCP tool: $webmcp_tool" >&2
