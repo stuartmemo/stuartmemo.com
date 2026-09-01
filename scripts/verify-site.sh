@@ -14,16 +14,19 @@ required_files=(
     "mcp-mpc/og.png"
     "mcp-mpc/webmcp.mp3"
     "mcp-mpc/samples/manifest.json"
-    "mcp-mpc/samples/dusty-crate/kick.wav"
-    "mcp-mpc/samples/hip-hop/kick.wav"
-    "mcp-mpc/samples/hip-hop/LICENSE-CC0.txt"
-    "mcp-mpc/samples/hip-hop/PROVENANCE.md"
-    "mcp-mpc/samples/lofi-acoustic/kick.wav"
-    "mcp-mpc/samples/lofi-acoustic/LICENSE-CC0.txt"
-    "mcp-mpc/samples/lofi-acoustic/PROVENANCE.md"
-    "mcp-mpc/samples/traditional/kick.wav"
-    "mcp-mpc/samples/traditional/LICENSE-CC0.txt"
-    "mcp-mpc/samples/traditional/PROVENANCE.md"
+    "mcp-mpc/samples/SOURCES.md"
+    "mcp-mpc/samples/fischer-808/kick.wav"
+    "mcp-mpc/samples/fischer-808/LICENSE.txt"
+    "mcp-mpc/samples/fischer-808/PROVENANCE.md"
+    "mcp-mpc/samples/uzu/punch-kick.wav"
+    "mcp-mpc/samples/uzu/LICENSE.txt"
+    "mcp-mpc/samples/uzu/PROVENANCE.md"
+    "mcp-mpc/samples/big-rusty/kick.wav"
+    "mcp-mpc/samples/big-rusty/LICENSE.txt"
+    "mcp-mpc/samples/big-rusty/PROVENANCE.md"
+    "mcp-mpc/samples/swirly/cajon-kick.wav"
+    "mcp-mpc/samples/swirly/LICENSE.txt"
+    "mcp-mpc/samples/swirly/PROVENANCE.md"
     "qwerty-hancock/index.html"
     "qwerty-hancock/qwerty-hancock.js"
     "qwerty-hancock/qwerty-hancock.png"
@@ -46,7 +49,7 @@ if [[ "$mcp_sample_count" != "64" ]]; then
     exit 1
 fi
 
-for mcp_kit in dusty-crate hip-hop lofi-acoustic traditional; do
+for mcp_kit in fischer-808 uzu big-rusty swirly; do
     mcp_kit_sample_count="$(find "$site_dir/mcp-mpc/samples/$mcp_kit" -maxdepth 1 -type f -name '*.wav' | wc -l | tr -d ' ')"
     if [[ "$mcp_kit_sample_count" != "16" ]]; then
         echo "Expected 16 samples in MCP MPC kit $mcp_kit, found $mcp_kit_sample_count." >&2
@@ -60,7 +63,13 @@ done
 
 mcp_cc0_kit_count="$(grep -c '"rights": "CC0 1.0 Universal"' "$site_dir/mcp-mpc/samples/manifest.json")"
 if [[ "$mcp_cc0_kit_count" != "3" ]]; then
-    echo "Expected CC0 provenance for three recorded MCP MPC kits, found $mcp_cc0_kit_count." >&2
+    echo "Expected CC0 provenance for three MCP MPC kits, found $mcp_cc0_kit_count." >&2
+    exit 1
+fi
+
+mcp_unlicense_kit_count="$(grep -c '"rights": "The Unlicense / public-domain dedication"' "$site_dir/mcp-mpc/samples/manifest.json")"
+if [[ "$mcp_unlicense_kit_count" != "1" ]]; then
+    echo "Expected Unlicense provenance for one MCP MPC kit, found $mcp_unlicense_kit_count." >&2
     exit 1
 fi
 

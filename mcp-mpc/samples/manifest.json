@@ -1,459 +1,22 @@
 {
-  "generatedBy": "scripts/generate-samples.mjs + scripts/import-acoustic-kit.mjs",
+  "generatedBy": "scripts/import-factory-kits.mjs",
   "sampleRate": 22050,
   "format": "16-bit mono PCM WAV",
-  "rights": "Rights and provenance are listed per kit.",
+  "rights": "Rights, pinned sources, licenses, and per-file checksums are recorded for every kit.",
   "kits": [
     {
-      "id": "hip-hop",
+      "id": "fischer-808",
       "kind": "recorded",
       "rights": "CC0 1.0 Universal",
+      "licenseSha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
       "source": {
-        "name": "Virtuosity Drums",
-        "repository": "https://github.com/sfzinstruments/virtuosity_drums",
-        "revision": "9f04cf9a734527edfbb0a4eee1f674e45bbf71bc",
-        "performer": "Austin McMahon",
-        "recording": "Virtuosity Musical Instruments, Boston; Versilian Studios / Karoryfer Samples",
-        "micSet": "close kick/snare, natural mid and overhead microphones, plus selected vintage mono room hits"
+        "name": "Roland TR-808 Rhythm Composer Sound Sample Set 1.0.0",
+        "repository": "https://github.com/tidalcycles/sounds-tr808-fischer",
+        "revision": "85fbecf1bec32553395625ea659e2a56dfd7c0e1",
+        "creator": "Michael Fischer / Technopolis"
       },
-      "processing": "Real acoustic hits pitched and resampled into tight boom-bap one-shots, with focused filtering, moderate saturation, 12/13-bit-style quantization, short tails, and 16-bit mono PCM WAV encoding.",
-      "files": [
-        "kick.wav",
-        "snare.wav",
-        "snare-stack.wav",
-        "closed-hat.wav",
-        "open-hat.wav",
-        "deep-kick.wav",
-        "low-tom.wav",
-        "pedal-hat.wav",
-        "rim.wav",
-        "ride-bell.wav",
-        "high-tom.wav",
-        "ghost-snare.wav",
-        "crash.wav",
-        "snare-flam.wav",
-        "room-kick.wav",
-        "room-snare.wav"
-      ],
-      "provenance": [
-        {
-          "file": "kick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/kickmic/kick/kickmic_kick_snoff_vl4_rr3.flac",
-              "gain": 0.82
-            },
-            {
-              "path": "Samples/mid/kick/mid_kick_snoff_vl4_rr3.flac",
-              "gain": 0.38
-            }
-          ],
-          "sha256": "e23f584850ffdb52b9857b2ed727ad603a1130a311d4156f90e2c99711b9a226"
-        },
-        {
-          "file": "snare.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_center_vl34.flac",
-              "gain": 0.78
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_center_vl34.flac",
-              "gain": 0.42
-            }
-          ],
-          "sha256": "89ec9dc08e4f87a070e6640010db0aa2f97551eddd8f64e74152ea90949d2390"
-        },
-        {
-          "file": "snare-stack.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_center_vl32.flac",
-              "gain": 0.62
-            },
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_rimshot_vl10.flac",
-              "gain": 0.28,
-              "delaySeconds": 0.012
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_offcenter_vl30.flac",
-              "gain": 0.35,
-              "delaySeconds": 0.024
-            }
-          ],
-          "sha256": "f8e1d7bb5449ba5788f5a33589da1f739c13e5b538f4fa1f819678e8ebdc4fc8"
-        },
-        {
-          "file": "closed-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_closed_vl4_rr3.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "689d2accefe5cdba3159d160a1b18600b653e2449fe43b1ec2c5e397b7095e8b"
-        },
-        {
-          "file": "open-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_open_vl4_rr1.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "a02336c59b1bb5b09a1cf65f317a74aa84e4f289f2024e0798eeb0ac3dbaf497"
-        },
-        {
-          "file": "deep-kick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/kickmic/kick/kickmic_kick_snoff_vl4_rr1.flac",
-              "gain": 0.84
-            },
-            {
-              "path": "Samples/mid/kick/mid_kick_snoff_vl4_rr1.flac",
-              "gain": 0.35
-            }
-          ],
-          "sha256": "fc0c8f9d93d05442606f7ddc9f24183baec2074f54927cf7e1c8b52a67c63004"
-        },
-        {
-          "file": "low-tom.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/mid/ltom/mid_ltom_center_vl15.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "485b69345361b21b6c7d03e3610119bf4911df5f6c575a5c8b040bf103055cc7"
-        },
-        {
-          "file": "pedal-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_pedal_vl3_rr4.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "ca621a2f571c2a8fc6e0500043cbf6d8d23db381790a8ad48f0282c6e085b88f"
-        },
-        {
-          "file": "rim.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_rimshot_vl10.flac",
-              "gain": 0.82
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_rimshot_vl10.flac",
-              "gain": 0.3
-            }
-          ],
-          "sha256": "57b65a0c816b504a901e8832d45138c0fd3315fb12706892fda931fe54f27ddd"
-        },
-        {
-          "file": "ride-bell.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/ride/oh_ride_bell_vl3_rr3.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "f5cc4d97c05f61c3d993bb132942a05ada06c1ee3763406c73c72e84e3a5dd1b"
-        },
-        {
-          "file": "high-tom.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/mid/htom/mid_htom_offcenter_vl15.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "2ce307436b78edaff017edf965ac2f1093f6e088579bec1faf588bbbed12569f"
-        },
-        {
-          "file": "ghost-snare.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_offcenter_vl12.flac",
-              "gain": 0.75
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_offcenter_vl12.flac",
-              "gain": 0.4
-            }
-          ],
-          "sha256": "d7c2a6c0261ce9eea9b99c93a0ae92c6ef3211326b840171251f65d73f265748"
-        },
-        {
-          "file": "crash.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/crash/oh_crash_crash_vl3_rr4.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "6f1723a0ed29f8fb76ff2da973ec4c67a8639320439893c657e033d274a438b7"
-        },
-        {
-          "file": "snare-flam.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_flam_vl12.flac",
-              "gain": 0.76
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_flam_vl12.flac",
-              "gain": 0.42
-            }
-          ],
-          "sha256": "4bbded6ff933a67bc5263f295bc8bf8007e741255ba1c3155c21ec572c48ed5a"
-        },
-        {
-          "file": "room-kick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/kick/lofi_kick_snon_vl3_rr2.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "8494070da40f1c93546affe22d53dbb51d4e11c043d895c5ea5484f7574df700"
-        },
-        {
-          "file": "room-snare.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/snare/lofi_snare_center_vl24.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "93e665a03fc84d37d48e59c063020624df4bca51aca01fef6e0d7b61f6b4b022"
-        }
-      ]
-    },
-    {
-      "id": "traditional",
-      "kind": "recorded",
-      "rights": "CC0 1.0 Universal",
-      "source": {
-        "name": "Virtuosity Drums",
-        "repository": "https://github.com/sfzinstruments/virtuosity_drums",
-        "revision": "9f04cf9a734527edfbb0a4eee1f674e45bbf71bc",
-        "performer": "Austin McMahon",
-        "recording": "Virtuosity Musical Instruments, Boston; Versilian Studios / Karoryfer Samples",
-        "micSet": "close kick/snare blended with natural mid and overhead microphones"
-      },
-      "processing": "Phase-aligned microphone blends with onset trim, a transparent 24 Hz high-pass, clean 22.05 kHz resampling, short fades, peak normalization, and 16-bit mono PCM WAV encoding.",
-      "files": [
-        "kick.wav",
-        "snare.wav",
-        "ghost-snare.wav",
-        "closed-hat.wav",
-        "open-hat.wav",
-        "floor-tom.wav",
-        "rack-tom.wav",
-        "pedal-hat.wav",
-        "cross-stick.wav",
-        "half-open-hat.wav",
-        "ride.wav",
-        "ride-bell.wav",
-        "crash.wav",
-        "second-crash.wav",
-        "rimshot.wav",
-        "soft-kick.wav"
-      ],
-      "provenance": [
-        {
-          "file": "kick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/kickmic/kick/kickmic_kick_snon_vl4_rr2.flac",
-              "gain": 0.78
-            },
-            {
-              "path": "Samples/mid/kick/mid_kick_snon_vl4_rr2.flac",
-              "gain": 0.52
-            }
-          ],
-          "sha256": "3fced38edf4c73eb50e1910b55bd5192374b7bcbd3532ae5ea742598137cc16d"
-        },
-        {
-          "file": "snare.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_center_vl32.flac",
-              "gain": 0.76
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_center_vl32.flac",
-              "gain": 0.5
-            }
-          ],
-          "sha256": "870f5ed7a998751f921a8d659262d9f71a535790193a1b4b426adc1e5b89ce50"
-        },
-        {
-          "file": "ghost-snare.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_center_vl10.flac",
-              "gain": 0.72
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_center_vl10.flac",
-              "gain": 0.56
-            }
-          ],
-          "sha256": "e1e071fad5497d53d1d0e6e21231de3edbeab03abfb36d9ca7f6ac752b5dc5da"
-        },
-        {
-          "file": "closed-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_closed_vl4_rr1.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "66cae2ed4590ea67e50a2fe2fd6430ae3e66211eb311aeab7d7e6f46627ff2c2"
-        },
-        {
-          "file": "open-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_open_vl4_rr2.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "c5d8fb01838554bd03d2888a2401163786938657f57c21b94b9273d385f25129"
-        },
-        {
-          "file": "floor-tom.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/mid/ltom/mid_ltom_center_vl14.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "cbf8cc9921e617a3a7fa08f2eb04820516badf95163b8d0031c26e421179e98c"
-        },
-        {
-          "file": "rack-tom.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/mid/htom/mid_htom_center_vl14.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "bc97ecb475af1a7e7c1d2ba5956d7bc1406ce3636c1507a0b1875a2150c3a52a"
-        },
-        {
-          "file": "pedal-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_pedal_vl3_rr2.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "12ce5786b81abe9bac9845282ac17de2b53bb65a0dd9761586ebef7c5815b28b"
-        },
-        {
-          "file": "cross-stick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_crossstick_vl14.flac",
-              "gain": 0.72
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_crossstick_vl14.flac",
-              "gain": 0.58
-            }
-          ],
-          "sha256": "72ce2330909024872058081610da0ae0e8e4bc7e4c7585c45fbffd1c454d4bd9"
-        },
-        {
-          "file": "half-open-hat.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/hh/oh_hh_34_vl4_rr3.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "4454fca6b5e5321101ebdf6b4639066cfa85ad878c6e337616490d015a14bd37"
-        },
-        {
-          "file": "ride.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/ride/oh_ride_ride_vl3_rr2.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "45f6cff40610411ad1b3f1d5ec19990d49a9620333d16ffbd5b42e71df6ce613"
-        },
-        {
-          "file": "ride-bell.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/ride/oh_ride_bell_vl3_rr1.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "8eec2d915450e3cab12f3192f414e70aee211dcec40d9bc9e0d3c10cdca52a6c"
-        },
-        {
-          "file": "crash.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/crash/oh_crash_crash_vl3_rr1.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "cc60729698c9fd2c600cc0238fe5559eee04cbfb0366e9a9a98e34bd5dab672f"
-        },
-        {
-          "file": "second-crash.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/oh/flatride/oh_flatride_crash_vl4.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "051f8f817e4884360c1b8de88ecc48cdd71b578155d373cfc079fd6e868fd55e"
-        },
-        {
-          "file": "rimshot.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/snaremic/snare/snaremic_snare_rimshot_vl9.flac",
-              "gain": 0.76
-            },
-            {
-              "path": "Samples/mid/snare/mid_snare_rimshot_vl9.flac",
-              "gain": 0.5
-            }
-          ],
-          "sha256": "24823d66ed45e2e91494eb322e93517a6bcf897a9a1d8550d5229651c0d69fad"
-        },
-        {
-          "file": "soft-kick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/kickmic/kick/kickmic_kick_snon_vl2_rr4.flac",
-              "gain": 0.76
-            },
-            {
-              "path": "Samples/mid/kick/mid_kick_snon_vl2_rr4.flac",
-              "gain": 0.54
-            }
-          ],
-          "sha256": "2b24bb16ad29437ed18a9ef843fceeb2d9e4f71c7673248d91fb3ad260e9e32b"
-        }
-      ]
-    },
-    {
-      "id": "dusty-crate",
-      "kind": "procedural",
-      "rights": "Original deterministic procedural synthesis. No third-party samples.",
+      "description": "Direct 16-bit recordings of a real TR-808, selected from Michael Fischer's 116-sample capture.",
+      "processing": "Onset trim, transparent mono resampling to 22.05 kHz, per-hit tail shaping, peak normalization, and 16-bit PCM WAV encoding.",
       "files": [
         "kick.wav",
         "snare.wav",
@@ -461,209 +24,887 @@
         "closed-hat.wav",
         "open-hat.wav",
         "low-tom.wav",
-        "conga.wav",
-        "tambourine.wav",
-        "rim.wav",
-        "cowbell.wav",
-        "shaker.wav",
-        "wood-perc.wav",
-        "crash.wav",
-        "ride.wav",
-        "bass-stab.wav",
-        "vinyl-hit.wav"
-      ]
-    },
-    {
-      "id": "lofi-acoustic",
-      "kind": "recorded",
-      "rights": "CC0 1.0 Universal",
-      "source": {
-        "name": "Virtuosity Drums",
-        "repository": "https://github.com/sfzinstruments/virtuosity_drums",
-        "revision": "9f04cf9a734527edfbb0a4eee1f674e45bbf71bc",
-        "performer": "Austin McMahon",
-        "recording": "Virtuosity Musical Instruments, Boston; Versilian Studios / Karoryfer Samples",
-        "micSet": "lofi / vintage mono mic"
-      },
-      "processing": "Onset-trimmed, lightly filtered and saturated, resampled to 22.05 kHz, 14-bit-style quantized, and encoded as 16-bit mono PCM WAV.",
-      "files": [
-        "kick.wav",
-        "snare.wav",
-        "ghost-snare.wav",
-        "hat-tip.wav",
-        "open-hat.wav",
-        "floor-tom.wav",
-        "rack-tom.wav",
-        "pedal-hat.wav",
-        "cross-stick.wav",
-        "hat-edge.wav",
-        "ride.wav",
-        "ride-bell.wav",
-        "crash.wav",
-        "splash.wav",
+        "mid-tom.wav",
+        "high-tom.wav",
         "rimshot.wav",
-        "soft-kick.wav"
+        "cowbell.wav",
+        "claves.wav",
+        "maracas.wav",
+        "cymbal.wav",
+        "low-conga.wav",
+        "mid-conga.wav",
+        "high-conga.wav"
       ],
       "provenance": [
         {
           "file": "kick.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/kick/lofi_kick_snon_vl3_rr2.flac",
-              "gain": 1
+              "path": "bd8/BD5050.WAV",
+              "sha256": "2ca93cd7a3b19f6ec7fe26fefe51b89de69b7be7a87047ffc8ecd396064a8504"
             }
           ],
-          "sha256": "f7f70534d71325c2eadba9a753955167fe156cd6d7daa0fb1bfd1a151893b8a1"
+          "durationSeconds": 1.12,
+          "peak": 0.94,
+          "sha256": "6c3082c8bfc67bdf24e79fd97f842f2cde823769a66d3c6de4b80816ba5bc718"
         },
         {
           "file": "snare.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/snare/lofi_snare_center_vl24.flac",
-              "gain": 1
+              "path": "sd8/SD5050.WAV",
+              "sha256": "6dcbf8acd5cee6d6b7955d26c6b57d8ca413f1ae1c7caafaaec780d83f08d712"
             }
           ],
-          "sha256": "ab4d125efbb4c92d8a00b700095498b9697acc05d7ff8c7d19cf2abdc256aab7"
+          "durationSeconds": 0.82,
+          "peak": 0.92,
+          "sha256": "a285841cfa25b854519085213c982ca04473cf691a3f80b940bbc6d751983a78"
         },
         {
-          "file": "ghost-snare.wav",
+          "file": "clap.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/snare/lofi_snare_center_vl9.flac",
-              "gain": 1
+              "path": "cp8/CP.WAV",
+              "sha256": "376429bb81cb48d1f392a11cd066c32ffb7883d445b2488704ea52e46bb08286"
             }
           ],
-          "sha256": "56dd30401d914838a729b4f8a0517c9bb627a600bf4edad5a52757ef693d6c03"
+          "durationSeconds": 0.68,
+          "peak": 0.88,
+          "sha256": "2aaf4a30832fba0491d2b3f3a088a81bf5f2a07df3a37ca5e4a3548bcefee2a9"
         },
         {
-          "file": "hat-tip.wav",
+          "file": "closed-hat.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/hh/lofi_hh_closed_vl2_rr1.flac",
-              "gain": 1
+              "path": "ch8/CH.WAV",
+              "sha256": "c9f30ff2b4d73b03f41960e504e03c54e9a59697af666fe4d155bab9cd1ccae6"
             }
           ],
-          "sha256": "e7bded510513849b0b42824de30132caae545ef7160119843e1e8bc8be38ba60"
+          "durationSeconds": 0.24,
+          "peak": 0.78,
+          "sha256": "d8eb208bdf8b5fa6e81254a317f4634c8f92f6ef6895212ec8c58ec3cfccaca4"
         },
         {
           "file": "open-hat.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/hh/lofi_hh_open_vl3_rr2.flac",
-              "gain": 1
+              "path": "oh8/OH50.WAV",
+              "sha256": "84ae3220fab2396380fb6ba6032bcec7c55a6d3f621d30a13c11fdeaa099aff7"
             }
           ],
-          "sha256": "710ad5e88f7a85a95499b20da8d0c19d6c11b891a346ca428278b5a787fab951"
+          "durationSeconds": 0.88,
+          "peak": 0.82,
+          "sha256": "4d31c44f5cf9315259e1f6d3173dd535dcf56497c10c43d0d4ae0297fbe04819"
         },
         {
-          "file": "floor-tom.wav",
+          "file": "low-tom.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/ltom/lofi_ltom_center_vl11.flac",
-              "gain": 1
+              "path": "lt8/LT50.WAV",
+              "sha256": "d3720682985a9621c4a67749dfd5336fa4f25564ef7ea2e633ac8ff5fdd64eda"
             }
           ],
-          "sha256": "4ff8c22bf4a98074b300a1657f9955b82f70da7707a1c25bc6f0f11eb0f797bc"
+          "durationSeconds": 0.7,
+          "peak": 0.9,
+          "sha256": "f70f161c048435d7288d08b6e48e1477a8e367d74cbcfc52cff9bbb8bd957538"
         },
         {
-          "file": "rack-tom.wav",
+          "file": "mid-tom.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/htom/lofi_htom_center_vl11.flac",
-              "gain": 1
+              "path": "mt8/MT50.WAV",
+              "sha256": "81bbc63110a21c5d1ff28572734f2969f96db9a2ca7e304e52b4f808de905927"
             }
           ],
-          "sha256": "c6ba3a1553f3bb4bf5679ef71ab0d6e88ef82f40160febc881f6af6ba507e5ed"
+          "durationSeconds": 0.62,
+          "peak": 0.88,
+          "sha256": "835f519602c5881ac67af43390237c72da197045a0b19998e8b843e9024efc3d"
         },
         {
-          "file": "pedal-hat.wav",
+          "file": "high-tom.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/hh/lofi_hh_pedal_vl2_rr3.flac",
-              "gain": 1
+              "path": "ht8/HT50.WAV",
+              "sha256": "7e0b9eddd95379298aacbf1520929f586191788d9e0841ad752d84bdde910d88"
             }
           ],
-          "sha256": "e4143db55f6941bf909e8082711ec4c981239a13f206e689446995cf8c8be6de"
-        },
-        {
-          "file": "cross-stick.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/snare/lofi_snare_crossstick_vl10.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "958738c3925d7e99d877f1235765a88bc85caa7f856510c0a5d15b4e5d6c88d6"
-        },
-        {
-          "file": "hat-edge.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/hh/lofi_hh_closed_vl4_rr4.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "5e2a5335bc96465955002f8c727606f49c37e8e0da8ceec98683e679ce421ce4"
-        },
-        {
-          "file": "ride.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/ride/lofi_ride_ride_vl2_rr2.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "12838fd1a38143adf326e6e6493f0082199445c02181dc9c2e0c6eb029c922cc"
-        },
-        {
-          "file": "ride-bell.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/ride/lofi_ride_bell_vl2_rr1.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "5bcb40ef806506d901b504a59c8abc72c1ef34b55b0e68deac9e2b82144aef31"
-        },
-        {
-          "file": "crash.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/crash/lofi_crash_crash_vl2_rr3.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "28fffe1839b6fbc853897937c8d31c49976d939884eca5aa6970532786b0bac3"
-        },
-        {
-          "file": "splash.wav",
-          "sourceFiles": [
-            {
-              "path": "Samples/lofi/hh/lofi_hh_splash_rr2.flac",
-              "gain": 1
-            }
-          ],
-          "sha256": "800c16e3e06becc1161900d0714abec63af8c2a0c91a40cc0a1034a06f575570"
+          "durationSeconds": 0.56,
+          "peak": 0.86,
+          "sha256": "0bf9aa4b69b6ad25649a0746af974ef1da42b61b9d2ddc562d0ca4f98b38afc4"
         },
         {
           "file": "rimshot.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/snare/lofi_snare_rimshot_vl9.flac",
-              "gain": 1
+              "path": "rs8/RS.WAV",
+              "sha256": "20d5cd385c0f8c3a24bbfe78c2e2747776841ede6185bc0fe93f97f0b455b89c"
             }
           ],
-          "sha256": "17a00fcbc12b497c37bbf11a039b9dbd3a31213c2f40ceb127382ff65a8c128c"
+          "durationSeconds": 0.3,
+          "peak": 0.82,
+          "sha256": "fb7885c30a39c6044ff9c5593fab8393c178e304713e8dc0baf7039ad236a6ef"
         },
         {
-          "file": "soft-kick.wav",
+          "file": "cowbell.wav",
           "sourceFiles": [
             {
-              "path": "Samples/lofi/kick/lofi_kick_snon_vl1_rr4.flac",
-              "gain": 1
+              "path": "cb8/CB.WAV",
+              "sha256": "1468cbd6c75a1f23b50a15968796c256c74893a35aa3824c6663db82c271f28d"
             }
           ],
-          "sha256": "631a50f9465594b735ef46c4c182dc2cbd4d99e0746a6865dffdebdd3f4ec40c"
+          "durationSeconds": 0.62,
+          "peak": 0.82,
+          "sha256": "0ebcd89603d97aeba925fb5c53a2f9345b92fabd5f9ca6cc2cdacec4b44b11d2"
+        },
+        {
+          "file": "claves.wav",
+          "sourceFiles": [
+            {
+              "path": "cl8/CL.WAV",
+              "sha256": "4f5b72674791ce133a2ad3bd40c9a0e628bad9062eb8f04de27f59dcc8ce5d46"
+            }
+          ],
+          "durationSeconds": 0.3,
+          "peak": 0.8,
+          "sha256": "dc82912df817a9f5214982a3905c7bf0e5fcd1453032998a0ee73e207d18a2cb"
+        },
+        {
+          "file": "maracas.wav",
+          "sourceFiles": [
+            {
+              "path": "ma8/MA.WAV",
+              "sha256": "7b17cc2973fe55233c6ece7b341adb4d04a44b12527582102591c8981a586451"
+            }
+          ],
+          "durationSeconds": 0.34,
+          "peak": 0.74,
+          "sha256": "5452f72abe9d920d7cc1ee003d062a70c155e1fc11db34696fc98c7058d445a4"
+        },
+        {
+          "file": "cymbal.wav",
+          "sourceFiles": [
+            {
+              "path": "cy8/CY5050.WAV",
+              "sha256": "3aad28641774c1e7a5502f40ec76d1b219192631547e308ce74c6d4a1c5e70a0"
+            }
+          ],
+          "durationSeconds": 1.45,
+          "peak": 0.82,
+          "sha256": "c02c335ed6bc55035089f567b8f4d7d52baed013b3f08dd60a33db17800503e5"
+        },
+        {
+          "file": "low-conga.wav",
+          "sourceFiles": [
+            {
+              "path": "lc8/LC50.WAV",
+              "sha256": "6591f57bbbdb891819a0ce6ce5b3bfd12d24da9f7f413243ef37b2593d1a7393"
+            }
+          ],
+          "durationSeconds": 0.5,
+          "peak": 0.86,
+          "sha256": "658db15d945d22bb7937cb1cb4b459f811f8f489f6ca9f54010350d9b4632d37"
+        },
+        {
+          "file": "mid-conga.wav",
+          "sourceFiles": [
+            {
+              "path": "mc8/MC50.WAV",
+              "sha256": "8175efe26c67f5af926bdf376b1bde75f495451140a2ebc132e74644b31cae1b"
+            }
+          ],
+          "durationSeconds": 0.46,
+          "peak": 0.84,
+          "sha256": "93b5caec0a7edfacb25f4e3ca8a6d997e09db28c6f7896fa544ed5d3fe6c1709"
+        },
+        {
+          "file": "high-conga.wav",
+          "sourceFiles": [
+            {
+              "path": "hc8/HC50.WAV",
+              "sha256": "ee4354b1fb79126e455a5343161f5c1e78165874df8a74dece78cbb5b6964af9"
+            }
+          ],
+          "durationSeconds": 0.42,
+          "peak": 0.82,
+          "sha256": "a725d92337ba7a5a0c3c76a7fa9b29c6b800be171e9d18299efdc1263b2b2a57"
+        }
+      ]
+    },
+    {
+      "id": "uzu",
+      "kind": "recorded",
+      "rights": "The Unlicense / public-domain dedication",
+      "licenseSha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e",
+      "source": {
+        "name": "uzu-drumkit",
+        "repository": "https://github.com/tidalcycles/uzu-drumkit",
+        "revision": "2f3e05c70ab4d73ad053a1467adec89bd27377a0",
+        "creator": "Mot4i, Switch Angel, and Ludens"
+      },
+      "description": "Synthesized and analog-processed electronic drums, including modular sound-design hits.",
+      "processing": "Onset trim, stereo-to-mono fold-down, transparent resampling to 22.05 kHz, per-hit tail shaping, peak normalization, and 16-bit PCM WAV encoding.",
+      "files": [
+        "punch-kick.wav",
+        "deep-kick.wav",
+        "wide-snare.wav",
+        "tight-snare.wav",
+        "clap.wav",
+        "closed-hat.wav",
+        "hat-tick.wav",
+        "open-hat.wav",
+        "rim.wav",
+        "low-tom.wav",
+        "mid-tom.wav",
+        "high-tom.wav",
+        "crash.wav",
+        "ride.wav",
+        "shaker.wav",
+        "modular-hit.wav"
+      ],
+      "provenance": [
+        {
+          "file": "punch-kick.wav",
+          "sourceFiles": [
+            {
+              "path": "bd/10_bd_switchangel.wav",
+              "sha256": "394b81ccb31433bd1271e885d72a96ba7cc6cfa60a07b4358f9834b7adf4d455"
+            }
+          ],
+          "durationSeconds": 0.36,
+          "peak": 0.94,
+          "sha256": "97bc6125c92ab0f29d6c385166497e429f80514a8566ff1b36c67c223949a329"
+        },
+        {
+          "file": "deep-kick.wav",
+          "sourceFiles": [
+            {
+              "path": "bd/17_bd_switchangel.wav",
+              "sha256": "484a91b09ef6dd9df53427009a5f2e73c9a59b8749f522349bfb3ad8222feeb2"
+            }
+          ],
+          "durationSeconds": 0.98,
+          "peak": 0.94,
+          "sha256": "1034bbe099caa15a4ad870650e6a8e3dfc7b92199b50c081b7cbcd50327b1a99"
+        },
+        {
+          "file": "wide-snare.wav",
+          "sourceFiles": [
+            {
+              "path": "sd/10_sd_switchangel-bounce-2.wav",
+              "sha256": "b9c21ec993f25742cc0ef4961ae54aaea27f6391ca93f70133218e1fb178e7db"
+            }
+          ],
+          "durationSeconds": 0.58,
+          "peak": 0.92,
+          "sha256": "970fc3c6ba48e42d46039c812c7193855aad61c1b1f24710abcb52b385727a3b"
+        },
+        {
+          "file": "tight-snare.wav",
+          "sourceFiles": [
+            {
+              "path": "sd/11_sd_switchangel_3.wav",
+              "sha256": "5307a0eb6047e45545828a788dcad90acc564f358119fb52e773774ecd5b03e4"
+            }
+          ],
+          "durationSeconds": 0.3,
+          "peak": 0.9,
+          "sha256": "bae712feaac33fb2cef18d3d870efa4b6a50ed0236296658fdd3b1f932fd5130"
+        },
+        {
+          "file": "clap.wav",
+          "sourceFiles": [
+            {
+              "path": "cp/10_cp_switchangel.wav",
+              "sha256": "9eeb629263532a3ae972c2696d9fc524ace4bfc66eb36b697654d05408c1bbb6"
+            }
+          ],
+          "durationSeconds": 0.46,
+          "peak": 0.88,
+          "sha256": "ea0651a87538d944e10132e4215a2fb8bcb3dd31ce2adbcde0b65937439357b6"
+        },
+        {
+          "file": "closed-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "hh/10_hh_switchangel.wav",
+              "sha256": "3a6dcb613a4a9955c03ea3270c50c1909acc12ac56a0a355394bafa81a391920"
+            }
+          ],
+          "durationSeconds": 0.24,
+          "peak": 0.78,
+          "sha256": "67bcfdaec3a58547da93a50b4095e98352fe6f9b9b16d100d3f3ba1777870f02"
+        },
+        {
+          "file": "hat-tick.wav",
+          "sourceFiles": [
+            {
+              "path": "hh/12_hh_switchangel.wav",
+              "sha256": "f40626542342618371b5309285f527a6f22b909d04a209cbce76f9337f800d71"
+            }
+          ],
+          "durationSeconds": 0.16,
+          "peak": 0.74,
+          "sha256": "4625c9cc160797f4cffc3b8f2cb015ab3b2c15ce61190e14b54f72d711606280"
+        },
+        {
+          "file": "open-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "oh/10_oh_switchangel.wav",
+              "sha256": "39b5d5e57e45ae47078438093b632c9b37e03d20b69c73febaaf67e8b860553c"
+            }
+          ],
+          "durationSeconds": 0.68,
+          "peak": 0.82,
+          "sha256": "17355de1e109345034d6d49d9d5eba8cd95a00a0be8d8510d21b9d8d705c7508"
+        },
+        {
+          "file": "rim.wav",
+          "sourceFiles": [
+            {
+              "path": "rim/10_rim_switchangel.wav",
+              "sha256": "2fa7a10fd36247f4747e4fcca07eb2168f941bbb11a614d5d3584858fea95163"
+            }
+          ],
+          "durationSeconds": 0.18,
+          "peak": 0.8,
+          "sha256": "5d6560b4087ea91c8b880a2d7d1cb7bc7702d673bd7d782bddd8030e9885fd40"
+        },
+        {
+          "file": "low-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "lt/10_lt_mot4i.wav",
+              "sha256": "32111742c0573cf86e3081fff9f3cb81b386bf1c10393869fa4f368b5bbb6603"
+            }
+          ],
+          "durationSeconds": 0.8,
+          "peak": 0.9,
+          "sha256": "47bd133fe2f1144fc00ac5439e2616faff2c330ec9ed291d50bd9feff029e26f"
+        },
+        {
+          "file": "mid-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "mt/10_mt_mot4i.wav",
+              "sha256": "548dc1476842698008678e9859a3527e8cb88917ce1d17bb9769d7534ef91ebf"
+            }
+          ],
+          "durationSeconds": 0.5,
+          "peak": 0.88,
+          "sha256": "4826649cac19765b8317ebc76a1e6ba9b88c02ac873984c9be9d6432d6234a4c"
+        },
+        {
+          "file": "high-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "ht/10_ht_mot4i.wav",
+              "sha256": "8fecf73acc5c7f2336b3176ca4b32f59ab54d941bd6835bae43c5a3a9dfc31b2"
+            }
+          ],
+          "durationSeconds": 0.46,
+          "peak": 0.86,
+          "sha256": "c14dbfd88858a6a5b09f2ce8ac4715a5a4486a13077976f037b3da81182dcb2c"
+        },
+        {
+          "file": "crash.wav",
+          "sourceFiles": [
+            {
+              "path": "cr/11_cr_mot4i.wav",
+              "sha256": "0fd8dfeb7eccee5aad90154b25547ab4fa17ce09b8d187cb903fdc6a4edb6323"
+            }
+          ],
+          "durationSeconds": 1.52,
+          "peak": 0.82,
+          "sha256": "2910cfeb94431f86781535740c6a22458ed54f49d5848471397b1d0d74066c14"
+        },
+        {
+          "file": "ride.wav",
+          "sourceFiles": [
+            {
+              "path": "rd/10_rd_switchangel.wav",
+              "sha256": "88edbf3d85659aed5a54c0863c50b76f0f5b2a38df201589a7412becaedd78a1"
+            }
+          ],
+          "durationSeconds": 0.58,
+          "peak": 0.8,
+          "sha256": "fdf5605fcc90b0ab942bf92fc75a0d5f093d0a9c07ca67e9e780906f2a279ecd"
+        },
+        {
+          "file": "shaker.wav",
+          "sourceFiles": [
+            {
+              "path": "sh/10_sh_switchangel.wav",
+              "sha256": "9558e6a888f2253f52dd1fa604ad40de2df9291003dbf354b1b6a82c621e6e3f"
+            }
+          ],
+          "durationSeconds": 0.16,
+          "peak": 0.72,
+          "sha256": "bc8b528c9223222dfd4ca567d0138abb5e732fd8e0f0c4733ce6b28e54d4e462"
+        },
+        {
+          "file": "modular-hit.wav",
+          "sourceFiles": [
+            {
+              "path": "misc/10_misc_switchangel_ludens.wav",
+              "sha256": "5667164c2e2706d21f289770dcd83d3d2bbd4ceb939178df39f517aa8098d436"
+            }
+          ],
+          "durationSeconds": 0.2,
+          "peak": 0.82,
+          "sha256": "b4ac8b92548293bd1a93b67c8727c0f695d2facc614921c678a6367c381a960f"
+        }
+      ]
+    },
+    {
+      "id": "big-rusty",
+      "kind": "recorded",
+      "rights": "CC0 1.0 Universal",
+      "licenseSha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "source": {
+        "name": "Big Rusty Drums 1.100",
+        "repository": "https://github.com/sfzinstruments/karoryfer.big-rusty-drums",
+        "revision": "f07ce00df34a46b6b08375be56fe116cf15782bc",
+        "creator": "Karoryfer Samples"
+      },
+      "description": "Room-forward hits from a large vintage Polish acoustic kit, with four oversized toms and unusual cymbals.",
+      "processing": "Overhead microphone recordings folded to mono, onset-trimmed, resampled to 22.05 kHz, tail-shaped, peak-normalized, and encoded as 16-bit PCM WAV.",
+      "files": [
+        "kick.wav",
+        "snare.wav",
+        "rimshot.wav",
+        "closed-hat.wav",
+        "open-hat.wav",
+        "floor-tom.wav",
+        "low-tom.wav",
+        "mid-tom.wav",
+        "high-tom.wav",
+        "pedal-hat.wav",
+        "sidestick.wav",
+        "ride.wav",
+        "ride-bell.wav",
+        "crash.wav",
+        "china.wav",
+        "cymbal-stack.wav"
+      ],
+      "provenance": [
+        {
+          "file": "kick.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/kick_24/kick/oh/k_vl9_rr1.flac",
+              "sha256": "0ff171c04d2211b61c3afdb7ecc6732a8bf3608a154f427df5c25eaacee26a98"
+            }
+          ],
+          "durationSeconds": 1.45,
+          "peak": 0.94,
+          "sha256": "2ad1f3d72d6d55fb67acdc267b85e4e52b263d41f43430487ed332d9a7ae92ec"
+        },
+        {
+          "file": "snare.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/snare_14/center/oh/sn_center_vl9_rr1.flac",
+              "sha256": "034948624fe5068a4c52ca4745d3350da1b1258548d3642a9c398aadcb793404"
+            }
+          ],
+          "durationSeconds": 1.18,
+          "peak": 0.92,
+          "sha256": "47366d0472bf0c9f40dd242ec2f97124186f83afa6e302fd5752a4199e8b5ca8"
+        },
+        {
+          "file": "rimshot.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/snare_14/rimshot/oh/sn_rims_vl6_rr1.flac",
+              "sha256": "c69206fa16183379091fd55751692a6ad405dd9cbed8034f54eb24a8c5997cd1"
+            }
+          ],
+          "durationSeconds": 0.9,
+          "peak": 0.9,
+          "sha256": "702363ace4aae95b75b0d0ac847a6a5bcdb03140394e7cc18ff6a69996d611f4"
+        },
+        {
+          "file": "closed-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/hihat_14/cl/oh/ht_cl_vl6_rr1.flac",
+              "sha256": "fa0599a70e95cdcd4fff5e2f18636253eb673a0116ee3f7b347e85a272051f06"
+            }
+          ],
+          "durationSeconds": 0.38,
+          "peak": 0.78,
+          "sha256": "1d92717401fb6e98f6ae36b801343269bb22bdc01c04968ac16784a58a0ff76d"
+        },
+        {
+          "file": "open-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/hihat_14/open/oh/ht_open_vl6_rr1.flac",
+              "sha256": "12b65aee03c38c0c5f831224892af6d7f7f1ada4996e8fc1063fb508dbe63f69"
+            }
+          ],
+          "durationSeconds": 1.25,
+          "peak": 0.82,
+          "sha256": "004454b712d1195f8b269bfe1f7c2408a34bf128b81926889845b8cd7d7aaa5f"
+        },
+        {
+          "file": "floor-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/tom_22/center/oh/t22_vl7_rr1.flac",
+              "sha256": "a68204ae67921ffd85c3c6ba50023e73c6c43d1cf173c56db4252905fbae2195"
+            }
+          ],
+          "durationSeconds": 1.42,
+          "peak": 0.92,
+          "sha256": "0490d06bab68aa35034f7155bf0a6566ca7cb54695776e2801fbe8f4e1b606fc"
+        },
+        {
+          "file": "low-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/tom_18/center/oh/t18_vl8_rr1.flac",
+              "sha256": "92b6d9bacfda8cea78f0c7d6f05174cb8edcc98fb5533b85e950d725b4385785"
+            }
+          ],
+          "durationSeconds": 1.28,
+          "peak": 0.9,
+          "sha256": "935ac4c0f24c4873e45b4762e8580b8e3c8c7fec9a03e52568f918907bd545e3"
+        },
+        {
+          "file": "mid-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/tom_15/center/oh/t15_vl7_rr1.flac",
+              "sha256": "a93e21e635dfce1ed5166ab31fa1dd905e52221a49f73f97a1f24bed618b2486"
+            }
+          ],
+          "durationSeconds": 1.12,
+          "peak": 0.88,
+          "sha256": "cdc8b14cbcf77ea5d012580774313149efd7bd3246e802c07adf7c78678beb1d"
+        },
+        {
+          "file": "high-tom.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/tom_14/center/oh/t14_vl6_rr1.flac",
+              "sha256": "ee95f890c47e6af89b18faeb1b381ca49a5418d0d3dd32dc3c49288663857993"
+            }
+          ],
+          "durationSeconds": 1.02,
+          "peak": 0.88,
+          "sha256": "97975e9461e5604256bfc0a4a23376da9cde2fc9bb416beba7a6d25f731fcd78"
+        },
+        {
+          "file": "pedal-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/hihat_14/chik/oh/ht_chik_vl5_rr1.flac",
+              "sha256": "2948bdd436c396780c955aae7340516b1be73a28942d0ccf72cff28f9085a139"
+            }
+          ],
+          "durationSeconds": 0.42,
+          "peak": 0.76,
+          "sha256": "6589aaea92bab1c89b5d22e56c4d4ad29cf9a6f5360feb3e03c0aad1577af3ad"
+        },
+        {
+          "file": "sidestick.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/snare_14/sidestick/oh/sn_ss_vl4_rr1.flac",
+              "sha256": "63519f4759e8712583e6cdd93936eac8fdaf6ef9f2dbd0ddb63f3d4627b3e5ae"
+            }
+          ],
+          "durationSeconds": 0.54,
+          "peak": 0.82,
+          "sha256": "016420a94f7d8c22dc83640ad376e79f33a4f4dc52c05f7b06ac2dd117d705a4"
+        },
+        {
+          "file": "ride.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/ride_22/rd/oh/rd_vl9_rr1.flac",
+              "sha256": "e76f64a7fdc87abddd5beca55b04e0de1f18570fb6188cd3ecebe4f5b9112cac"
+            }
+          ],
+          "durationSeconds": 1.6,
+          "peak": 0.82,
+          "sha256": "1ff3be689ddaf9c39eedd07775ac2a750588e083e0d8ddd20eaa1eb36bfcf296"
+        },
+        {
+          "file": "ride-bell.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/ride_22/bl/oh/rd_bl_vl4_rr1.flac",
+              "sha256": "6d1af3d880490485e447618b8e5f2f3fbae9ab115eac1bdd51800f4cce3386d3"
+            }
+          ],
+          "durationSeconds": 1.24,
+          "peak": 0.84,
+          "sha256": "e9e7ff3065d9043206b9e5528f6708a3b3d803af84f3d9da40ea1dd6df4a4377"
+        },
+        {
+          "file": "crash.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/crash_17/cr/oh/cr_vl5_rr1.flac",
+              "sha256": "511907df68befff63a39df0693868ca8026f46bbd5d0c8e4d1b9cdfedea65504"
+            }
+          ],
+          "durationSeconds": 1.72,
+          "peak": 0.82,
+          "sha256": "12e5b6e60a8715ac0c2d82a499d8c9b8488cfa1c8d9c75ce4a6465baf56fca3e"
+        },
+        {
+          "file": "china.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/china_18/cn/oh/cn_vl5_rr1.flac",
+              "sha256": "dba1804a48cec921a1f5e32811e56302cf3885c1b1648561bbec703422d5fa8c"
+            }
+          ],
+          "durationSeconds": 1.62,
+          "peak": 0.82,
+          "sha256": "6ed18b7d62154430fe2504b3b9c9d7a239f5f0649429df326216a8e0d00b6ec0"
+        },
+        {
+          "file": "cymbal-stack.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/stack_3_layer/mid/oh/st_mid_vl6_rr1.flac",
+              "sha256": "6d3466d7a0c148f130fa4aa6cae1a1b32e0a4e2433e7ea0deb5416f4b272e080"
+            }
+          ],
+          "durationSeconds": 1.35,
+          "peak": 0.84,
+          "sha256": "b4885378f79fef2a5eed478facbf4d29ddb93f4d1608f5b95f1ba0f2a752bf9e"
+        }
+      ]
+    },
+    {
+      "id": "swirly",
+      "kind": "recorded",
+      "rights": "CC0 1.0 Universal",
+      "licenseSha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "source": {
+        "name": "Swirly Drums 1.100",
+        "repository": "https://github.com/sfzinstruments/karoryfer.swirly-drums",
+        "revision": "c40dafe0011cb2e54c0c220ff0fa308a11fc60f5",
+        "creator": "Karoryfer Samples"
+      },
+      "description": "A brushed and hand-played character palette with cajon, snare buzz, hand drums, and cracked cymbals.",
+      "processing": "Recorded hits onset-trimmed, folded to mono where needed, resampled to 22.05 kHz, tail-shaped, peak-normalized, and encoded as 16-bit PCM WAV.",
+      "files": [
+        "cajon-kick.wav",
+        "buzz-kick.wav",
+        "brush-snare.wav",
+        "snare-dig.wav",
+        "closed-hat.wav",
+        "open-hat.wav",
+        "darbouka.wav",
+        "djembe.wav",
+        "high-bongo.wav",
+        "low-bongo.wav",
+        "cowbell.wav",
+        "snare-edge.wav",
+        "broken-crash.wav",
+        "cracked-splash.wav",
+        "china.wav",
+        "ride.wav"
+      ],
+      "provenance": [
+        {
+          "file": "cajon-kick.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/cajon_kick/cajon_kick_vl13_rr1_rear.wav",
+              "sha256": "2b645c40713d67e90406b1525bd5ef6953a4df028d9ce2e2f09a63553b13d72f"
+            }
+          ],
+          "durationSeconds": 0.78,
+          "peak": 0.92,
+          "sha256": "a477850870fb231debfa3314d1e3a684e97c7cb2411450b5f88e994745e2ed2b"
+        },
+        {
+          "file": "buzz-kick.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/kick_buzz/buzz_kick_with_snare_buzz_vl9_rr1.wav",
+              "sha256": "d6e137f5ae7d0eb11e3f5e31f8da0134cb294899611b139a239c735f815946f8"
+            }
+          ],
+          "durationSeconds": 1,
+          "peak": 0.92,
+          "sha256": "aec26a4fd76cd9dd1d339775ac827304ae4fac14754cede52cce39b1e23ecce2"
+        },
+        {
+          "file": "brush-snare.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/snare_main/snare_hit_vl12_rr1_top.wav",
+              "sha256": "04189d4d135e72f746f831839ccd0544099fbf9b3696d87f52da1b5957d45ef6"
+            }
+          ],
+          "durationSeconds": 0.86,
+          "peak": 0.9,
+          "sha256": "e651bcaa9998015966c738b872940bd20db470d6f8444242876fda30273ddca0"
+        },
+        {
+          "file": "snare-dig.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/snare_dig/snare_dig_vl10_rr1_top.wav",
+              "sha256": "fc3e9a3f734eccd944656191e9998ac24115e85014bccdaf86c93bdadacc38ce"
+            }
+          ],
+          "durationSeconds": 0.68,
+          "peak": 0.86,
+          "sha256": "c661fdf43cd00e601aeb98c0185750fa36a5741cd5c85031c0d8ed19a428cc54"
+        },
+        {
+          "file": "closed-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/hat_closed/hh_closed_vl12_rr1.wav",
+              "sha256": "dd799c373134f0251a194eadbf551039e0bc6b5ec0e4a8e6d1b42d2e61a261c7"
+            }
+          ],
+          "durationSeconds": 0.42,
+          "peak": 0.76,
+          "sha256": "c18bae1f58c1a78e426d9ce4ab5cd7a603f4e7e27e1feaa2c79303a49b3b0eda"
+        },
+        {
+          "file": "open-hat.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/hat_open/hh_open_vl14_rr1.wav",
+              "sha256": "e8efeaa2e56d1591149133bd31462caf9d871d7cdc7d50656c445b5c414eb5a2"
+            }
+          ],
+          "durationSeconds": 1.02,
+          "peak": 0.8,
+          "sha256": "a6ff061c83f13f0fc86f6934a7eabce7776955ca981d53cbf02ee4a5dbe5c02d"
+        },
+        {
+          "file": "darbouka.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/darbouka/darbouka_vl12_rr1.wav",
+              "sha256": "6f24d6aa9f6846199746a5df4369b594e7e957cc3e83c93512309d2b2a369cbb"
+            }
+          ],
+          "durationSeconds": 0.72,
+          "peak": 0.88,
+          "sha256": "b29dbd5988e60b212efbaa3cd0f2cda8201027cfdbc0011452237cc7a2d53a5c"
+        },
+        {
+          "file": "djembe.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/djembe/djembe_vl12_rr1.wav",
+              "sha256": "2ad1af94f007beffc6c46377027e1114720bcc39018534351e389e9a546abf32"
+            }
+          ],
+          "durationSeconds": 0.84,
+          "peak": 0.9,
+          "sha256": "5b78ecc7c589d391acae1e4f1f537ac17b98815838199f651e2acf38ac58cc2b"
+        },
+        {
+          "file": "high-bongo.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/hbongo/hbongo_vl9_rr1.wav",
+              "sha256": "a937caad61970a4a19b1b01cf6a821b8453d16a8d19eb93dfc17a2f0cef94a6b"
+            }
+          ],
+          "durationSeconds": 0.52,
+          "peak": 0.84,
+          "sha256": "157a97f11214780131f2bfbf6bb02f066f26cf9fd49f4b71e497c30846e88242"
+        },
+        {
+          "file": "low-bongo.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/lbongo/lbongo_vl9_rr1.wav",
+              "sha256": "4c5ffe69f5063a0d237935cef37e9bc8e53abf669c8da7a42e3c1267043a5db4"
+            }
+          ],
+          "durationSeconds": 0.58,
+          "peak": 0.86,
+          "sha256": "25fb942bd02dcea7377adb6e5f30b7fb9f1f53cfd311b014449cfac0077bc3ce"
+        },
+        {
+          "file": "cowbell.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/cowbell/cowbell_vl9_rr1.wav",
+              "sha256": "4be71bff6a8d9031d6a9ae02f51fb37b9ed6d987c46dbc01559bed1ca16c30e8"
+            }
+          ],
+          "durationSeconds": 0.52,
+          "peak": 0.8,
+          "sha256": "eb617f7bf03253dba73b056ab8688a47e27da8d8c9479c88111f66cc4c6b046c"
+        },
+        {
+          "file": "snare-edge.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/snare_edge/snare_edge_vl10_rr1_top.wav",
+              "sha256": "e16fe097385d374984843de0f032dba4588cdc12500a891cf603c0509cfb4109"
+            }
+          ],
+          "durationSeconds": 0.76,
+          "peak": 0.86,
+          "sha256": "861f925e6932deed5b9c0b53b121a282940db0cd38885035664fcc153e00d728"
+        },
+        {
+          "file": "broken-crash.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/crash_broken/crash_vl12_rr1.wav",
+              "sha256": "27fbcf79cd6d740fae4c057048a9752a0b49a5e986380a02bf3ec71fc85f770a"
+            }
+          ],
+          "durationSeconds": 1.5,
+          "peak": 0.8,
+          "sha256": "faa21f03adf354d6143f530b8ea3b9140653a41222a903de64c296922399b0ac"
+        },
+        {
+          "file": "cracked-splash.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/splash_broken/splash_vl9_rr1.wav",
+              "sha256": "156ee526168d5cbf6fc85ea174724da26e26772dd13738da900a345839e535e9"
+            }
+          ],
+          "durationSeconds": 1.2,
+          "peak": 0.8,
+          "sha256": "e2465e565f576b7eebc20676396005f297a19b27bbf6fb04adb23991309a75c3"
+        },
+        {
+          "file": "china.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/china/china_vl12_rr1.wav",
+              "sha256": "cf17744a7591b100004ba89f86c3871a11719d86cff4852bc7c9daa5b4c1f09f"
+            }
+          ],
+          "durationSeconds": 1.62,
+          "peak": 0.8,
+          "sha256": "78ad61f67a709f82da8b469c82a584aba8d8a2ec347f56226a41698e4e460672"
+        },
+        {
+          "file": "ride.wav",
+          "sourceFiles": [
+            {
+              "path": "Samples/ride/ride_vl9_rr1.wav",
+              "sha256": "85085621e67718e0845e20c7afccbd590d2221892bdd72341fdefdc19665d112"
+            }
+          ],
+          "durationSeconds": 1.5,
+          "peak": 0.8,
+          "sha256": "a7041dfbe46f2f2980ca6599c0bab0ade9dccb09e54f991ce4948f95879bd11a"
         }
       ]
     }
