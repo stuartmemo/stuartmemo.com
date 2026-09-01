@@ -12,6 +12,7 @@ required_files=(
     "index.html"
     "mcp-mpc/index.html"
     "mcp-mpc/og.png"
+    "mcp-mpc/webmcp.mp3"
     "mcp-mpc/samples/manifest.json"
     "mcp-mpc/samples/dusty-crate/kick.wav"
     "mcp-mpc/samples/hip-hop/kick.wav"
