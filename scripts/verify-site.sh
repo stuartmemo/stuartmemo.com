@@ -13,6 +13,7 @@ required_files=(
     "mcp-mpc/index.html"
     "mcp-mpc/og.png"
     "mcp-mpc/webmcp.mp3"
+    "mcp-mpc/audio/voice.mp3"
     "mcp-mpc/samples/manifest.json"
     "mcp-mpc/samples/SOURCES.md"
     "mcp-mpc/samples/fischer-808/kick.wav"
@@ -82,7 +83,7 @@ fi
 
 for webmcp_tool in \
     mcpmpc_get_state mcpmpc_select_kit mcpmpc_load_sample mcpmpc_assign_pad \
-    mcpmpc_configure_pad mcpmpc_chop_sample mcpmpc_create_sequence \
+    mcpmpc_configure_pad mcpmpc_set_sample_range mcpmpc_chop_sample mcpmpc_create_sequence \
     mcpmpc_play_pad mcpmpc_set_volume mcpmpc_set_transport
 do
     if ! grep -q "$webmcp_tool" "$mcp_bundle"; then
