@@ -44,6 +44,17 @@ for required_file in "${required_files[@]}"; do
     fi
 done
 
+if ! grep -q 'https://fonts.googleapis.com/css2?family=Press+Start+2P' \
+    "$site_dir/qwerty-hancock/index.html"; then
+    echo "Qwerty Hancock is missing its secure Press Start 2P stylesheet." >&2
+    exit 1
+fi
+
+if grep -q 'http://fonts.googleapis.com' "$site_dir/qwerty-hancock/index.html"; then
+    echo "Qwerty Hancock contains an insecure Google Fonts stylesheet URL." >&2
+    exit 1
+fi
+
 mcp_sample_count="$(find "$site_dir/mcp-mpc/samples" -type f -name '*.wav' | wc -l | tr -d ' ')"
 if [[ "$mcp_sample_count" != "64" ]]; then
     echo "Expected 64 MCP MPC samples across four kits, found $mcp_sample_count." >&2
