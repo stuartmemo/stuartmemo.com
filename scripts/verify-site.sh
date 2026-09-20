@@ -55,6 +55,16 @@ if grep -q 'http://fonts.googleapis.com' "$site_dir/qwerty-hancock/index.html"; 
     exit 1
 fi
 
+if ! grep -q 'masterGain.gain.value = 0.05;' "$site_dir/qwerty-hancock/index.html"; then
+    echo "Qwerty Hancock demo is missing its reduced master gain." >&2
+    exit 1
+fi
+
+if [[ "$(grep -c 'new QwertyHancock.QwertyHancock(settings)' "$site_dir/qwerty-hancock/index.html")" != "1" ]]; then
+    echo "Qwerty Hancock demo must create exactly one keyboard." >&2
+    exit 1
+fi
+
 mcp_sample_count="$(find "$site_dir/mcp-mpc/samples" -type f -name '*.wav' | wc -l | tr -d ' ')"
 if [[ "$mcp_sample_count" != "64" ]]; then
     echo "Expected 64 MCP MPC samples across four kits, found $mcp_sample_count." >&2
