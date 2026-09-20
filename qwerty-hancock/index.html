@@ -111,7 +111,7 @@ keyboard.keyUp = function (note, frequency) {
             masterGain = context.createGain();
             nodes = [];
 
-            masterGain.gain.value = 0.3;
+            masterGain.gain.value = 0.05;
             masterGain.connect(context.destination); 
 
             keyboard.keyDown = function (note, frequency) {
@@ -138,8 +138,6 @@ keyboard.keyUp = function (note, frequency) {
 
                 nodes = newNodes;
             };
-
-            keyboard = new QwertyHancock.QwertyHancock(settings);
 
             // Analytics
             var _gaq = _gaq || [];
