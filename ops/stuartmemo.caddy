@@ -14,6 +14,18 @@ stuartmemo.com {
 	redir /thx-deep-note-in-javascript/ https://blog.stuartmemo.com/thx-deep-note-in-javascript 301
 	redir /what-is-sound/ https://blog.stuartmemo.com/what-is-sound 301
 
+	# Unlisted files live outside versioned releases and the public repository.
+	handle_path /shared/* {
+		root * /srv/stuartmemo.com/shared
+		header {
+			X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+			Cache-Control "private, no-store"
+			Referrer-Policy "no-referrer"
+			X-Content-Type-Options "nosniff"
+		}
+		file_server
+	}
+
 	root * /srv/stuartmemo.com/current
 	encode zstd gzip
 	file_server

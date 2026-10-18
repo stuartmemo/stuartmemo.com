@@ -1,4 +1,4 @@
-/.git/
+/.git
 /.github/
 /.gitignore
 /.gitmodules
@@ -10,6 +10,7 @@
 /ops/
 /scripts/
 /_site/
+/shared/
 
 # These files are supplied by pinned component repositories during the build.
 /abbey-load/abbey-load.js

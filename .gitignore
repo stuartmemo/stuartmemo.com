@@ -1,5 +1,8 @@
 /_site/
 
+# Unlisted downloads are managed only on the server, outside this public repo.
+/shared/
+
 # Generated from pinned component repositories by scripts/build-site.sh.
 /abbey-load/abbey-load.js
 /qwerty-hancock/qwerty-hancock.js

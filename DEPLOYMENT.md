@@ -53,3 +53,27 @@ rollback on the next push.
 privileged infrastructure operation: validate with `caddy validate`, update the
 host's Caddyfile, and recreate or reload only the Caddy service. Normal content
 deployments never need elevated privileges.
+
+## Unlisted downloads
+
+Caddy serves `/shared/*` from
+`/home/deploy-stuartmemo/stuartmemo.com/shared` on the host, using the existing
+read-only parent mount. These files sit outside `current` and `releases`, so
+normal site deployments and release cleanup leave them in place.
+
+Upload each document beneath a cryptographically random directory name of at
+least 128 bits, and share its full HTTPS URL directly. Keep the document and its
+complete URL out of this public repository, page links, sitemaps, and
+`robots.txt`. The repository ignores and build exclusions reserve `/shared/`
+for server-managed files; the static release verifier rejects it.
+
+Responses include `X-Robots-Tag: noindex, nofollow, noarchive, nosnippet`,
+`Cache-Control: private, no-store`, and `Referrer-Policy: no-referrer`.
+Directory listings are disabled. Do not disallow crawling of these URLs in
+`robots.txt`: crawlers must be able to read the `noindex` response header.
+
+This is unlisted sharing, not authentication. Anyone with a link can download
+and redistribute the file; crawlers that ignore the header can still fetch it.
+To revoke a link, remove its document from the server's `shared` directory.
+Verify a new upload with a full HTTPS download and source hash comparison,
+check its response headers, and confirm parent directory URLs return 404.

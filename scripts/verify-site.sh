@@ -126,7 +126,7 @@ if [[ "$first_tile" != *'images/mcp-mpc.png'* || "$first_link" != *'href="/mcp-m
 fi
 
 for forbidden_path in \
-    .git .github components ops scripts README.md COMPONENTS.md DEPLOYMENT.md \
+    .git .github components ops scripts shared README.md COMPONENTS.md DEPLOYMENT.md \
     synth/current synth/releases synth/repo synth/revisions.log synth/shared
 do
     if [[ -e "$site_dir/$forbidden_path" ]]; then
