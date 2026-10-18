@@ -11,6 +11,7 @@
 /scripts/
 /_site/
 /shared/
+/stuart-brown-cv.pdf
 
 # These files are supplied by pinned component repositories during the build.
 /abbey-load/abbey-load.js

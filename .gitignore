@@ -2,6 +2,7 @@
 
 # Unlisted downloads are managed only on the server, outside this public repo.
 /shared/
+/stuart-brown-cv.pdf
 
 # Generated from pinned component repositories by scripts/build-site.sh.
 /abbey-load/abbey-load.js

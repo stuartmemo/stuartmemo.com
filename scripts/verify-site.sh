@@ -127,6 +127,7 @@ fi
 
 for forbidden_path in \
     .git .github components ops scripts shared README.md COMPONENTS.md DEPLOYMENT.md \
+    stuart-brown-cv.pdf \
     synth/current synth/releases synth/repo synth/revisions.log synth/shared
 do
     if [[ -e "$site_dir/$forbidden_path" ]]; then

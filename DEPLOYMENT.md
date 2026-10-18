@@ -61,11 +61,17 @@ Caddy serves `/shared/*` from
 read-only parent mount. These files sit outside `current` and `releases`, so
 normal site deployments and release cleanup leave them in place.
 
-Upload each document beneath a cryptographically random directory name of at
-least 128 bits, and share its full HTTPS URL directly. Keep the document and its
-complete URL out of this public repository, page links, sitemaps, and
-`robots.txt`. The repository ignores and build exclusions reserve `/shared/`
-for server-managed files; the static release verifier rejects it.
+The CV is stored as `shared/stuart-brown-cv.pdf` on the server and served at
+`/stuart-brown-cv.pdf`. Its previous URL under a random directory in `/shared/`
+redirects to the root-level URL. Both the redirect and the PDF response carry
+the indexing and cache headers below.
+
+Other documents can be uploaded beneath a cryptographically random directory
+name of at least 128 bits and shared by their full HTTPS URL. Keep documents
+out of this public repository, and do not add download links to public pages,
+sitemaps, or `robots.txt`. The repository ignores, build exclusions, and static
+release verifier prevent `/shared/` and the root-level CV from entering a
+versioned site release.
 
 Responses include `X-Robots-Tag: noindex, nofollow, noarchive, nosnippet`,
 `Cache-Control: private, no-store`, and `Referrer-Policy: no-referrer`.
